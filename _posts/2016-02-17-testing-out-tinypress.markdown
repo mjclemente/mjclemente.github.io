@@ -1,8 +1,14 @@
 ---
 published: true
-title: Testing out TinyPress
+title: Gotta start somewhere
 layout: post
+tags: [blogging]
+categories: [General]
 ---
-I'm just testing out TinyPress. Seeing if it's as easy as it looks.
+I want to blog, but never actually do. So I'm starting.
 
-Site looks nice. But the page isn't showing yet. Maybe I need to republish to have it rebuilt.
+Using TinyPress right now, because it seemed like the quickest and cheapest way to start.
+
+Looks pretty good, if I do say so myself.
+
+Gotta start somewhere.
