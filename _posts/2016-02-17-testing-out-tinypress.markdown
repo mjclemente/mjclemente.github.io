@@ -3,7 +3,6 @@ published: true
 title: Gotta start somewhere
 layout: post
 tags: [blogging]
-categories: [General]
 ---
 I want to blog, but never actually do. So I'm starting.
 
