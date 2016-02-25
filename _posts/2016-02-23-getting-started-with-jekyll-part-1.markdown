@@ -1,6 +1,6 @@
 ---
 published: true
-title: Getting Started with Jekyll (Part 1, Wrestling with Ruby)
+title: Blogging with Jekyll (Part 1, Wrestling with Ruby)
 layout: post
 tags: [blogging,jekyll,ruby]
 ---
