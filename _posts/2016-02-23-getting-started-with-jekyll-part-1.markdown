@@ -5,7 +5,7 @@ layout: post
 tags: [blogging,jekyll,ruby]
 ---
 This was supposed to be a post complaining about the standards, or lack thereof, applied by ThemeForest, to the Wordpress Themes they well. As I went to write it I noticed that TinyPress.co's SSL certificate had expired, so it seemed as good a time as any to dive into Jekyll and handle this static blogging with Github Pages myself.
-
+<!--more-->
 What follows isn't a guide; it's just my log of the 600+ mistakes it took for me to get started using Jekyll. As such, it contains a lot of dead ends before I got it all working. In hindsight, it seems that I made things significantly more difficult by starting with TinyPress, instead of just RTFM for Jekyll and Github Pages myself. So much for shortcuts.
 
 I started out well enough, using the [Jekyll Installation Docs](http://jekyllrb.com/docs/installation/). They said the best way to install it was using RubyGems, which I hadn't used before, but seemed easy enough, so I ran the command:
