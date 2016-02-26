@@ -3,7 +3,7 @@ highlighter: pygments
 markdown: kramdown
 url: http://mjclemente.github.io
 title: Matthew J. Clemente
-tagline: A log of everyday life
-description: My awesome new site
+tagline: Always Trying to Be Better
+description: Always trying to be better
 gems: [jekyll-paginate]
 paginate: 5
