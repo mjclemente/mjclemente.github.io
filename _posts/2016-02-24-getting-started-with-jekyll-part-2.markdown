@@ -33,6 +33,7 @@ The first route I tried was to just install the gem:
 Unsurprisingly, given my track record at this point, this didn't work and I got the same error message. This is where I finally gain a small bit of common sense, and went back to the documentation, like I really, really should have from the start.
 
 So, here are the docs: [Setting up your Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/), which ultimately helped me get it up and running, after a few more hiccups, along the way. That's the [third part of this series](/2016/02/24/getting-started-with-jekyll-part-3.html).
+<hr>
 
 [^1]: To paraphrase: "The fault, dear reader, is not in Jekyll, / But in ourselves"
 
