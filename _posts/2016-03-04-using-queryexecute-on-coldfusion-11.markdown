@@ -26,10 +26,10 @@ So how is this done with  `QueryExecute`? It took a little mucking around, but w
 	var sql = "SELECT TOP 1 fieldID, fieldName
 		FROM theTable,
 		WHERE fieldID = :fieldID";
-	
+
 	var qry_getSomeThingById = QueryExecute( sql, params );
 
-I do like this approach and think it's an improvement. Where I got tripped up was when we needed to access the generated ID. It turns out that you need to pass in a third argument (`- {result = "resultName"}`) to the function in order get that information back:
+I do like this approach and think it's an improvement. Where I got tripped up was when we needed to access the generated ID. It turns out that you need to pass in a third argument (`{result = "resultName"}`) to the function in order get that information back:
 
 	var resultName = '';
 	QueryExecute( sql, params, {result = "resultName"} );
@@ -40,12 +40,12 @@ Two additional notes on the structure for inserts:
 
 1) You don't need to name the query, because it's not returning any results. In fact, any name you assign to it won't be defined.
 
-2) If you're in a cfc and you don't *var* scope `resultName`, it ends up in the variables scope. Unfortunately, in this situation, I couldn't find an elegant way to *var* scope (you can't run `- {var result = "resultName"}`). So, you either need to declare and scope the variable before running `QueryExecute`, or explicitly use the *local* scope (`- {result = "local.resultName"}`). 
+2) If you're in a cfc and you don't *var* scope `resultName`, it ends up in the variables scope. Unfortunately, in this situation, I couldn't find an elegant way to *var* scope (you can't run `{var result = "resultName"}`). So, you either need to declare and scope the variable before running `QueryExecute`, or explicitly use the *local* scope (`{result = "local.resultName"}`).
 
 
 
 
 
-	
+
 
 
