@@ -1,6 +1,13 @@
 excerpt_separator: "<!--more-->"
 highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: text
+   ## line_numbers: true
 url: http://mjclemente.github.io
 title: Matthew J. Clemente
 tagline: Always Trying to Be Better
