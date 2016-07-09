@@ -9,15 +9,16 @@ One of the most common application requirements is outputting an arbitrary amoun
 I've handled this in a variety of ways in the past; sometimes with a variety of incrementing counters and `<cfif>` tags, occasionally with `<cfoutput group="someCol">`. It always ended up cluttering the view and it never felt clean. While every situation is different, I recently hit upon a simple solution for outputting data in Bootstrap's rows and columns, using ColdFusion's [ternary](http://www.bennadel.com/blog/1643-learning-coldfusion-9-the-ternary-operator.htm) and [mod](http://www.bennadel.com/blog/665-and-on-the-seventh-row-mod-created-1-and-it-was-good.htm) operators (of course those links are to Ben Nadel's blog). 
 
 Here was the situation: I needed to output data in four columns, with as many rows as necessary. Rather than beating around the bush, here's the code[^1]:
-	
-	<cfloop index="loopIndex" from="1" to="#arrayOfData.len()#">
-		#(loopIndex MOD 4 EQ 1) ? '<div class="row">' : ''#
-			<div class="col-sm-3">
-				<!---Col Content Here--->
-			</div>
-		#(loopIndex MOD 4 EQ 0 OR loopIndex EQ arrayOfData.len()) ? '</div>' : ''#
-	</cfloop>
 
+```text
+<cfloop index="loopIndex" from="1" to="#arrayOfData.len()#">
+	#(loopIndex MOD 4 EQ 1) ? '<div class="row">' : ''#
+		<div class="col-sm-3">
+			<!---Col Content Here--->
+		</div>
+	#(loopIndex MOD 4 EQ 0 OR loopIndex EQ arrayOfData.len()) ? '</div>' : ''#
+</cfloop>
+```
 
 Just a few notes on it:
 

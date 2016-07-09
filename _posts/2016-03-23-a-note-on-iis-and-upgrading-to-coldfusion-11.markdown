@@ -18,13 +18,16 @@ Some poking and prodding under the hood revealed that, even though we had run Co
 
 Correcting this issue alone, however, did not solve the problem. After restarting ColdFusion 11 and IIS, we continued to get 500 errors - because, drum roll please, the ISAPI Filter for *tomcat*, for the website, was still pointing to ColdFusion 10. This setting, which is inherited from the IIS server setting, doesn't look like it can be changed within the IIS GUI at the individual website level. So, to point the individual website to ColdFusion 11's *tomcat* ISAPI Filter, while leaving the rest of the sites using ColdFusion 10's, we needed to edit the `web.config` file for the site: 
 
-	<isapiFilters>
-		<remove name="tomcat" />
-		<filter 
-			name="tomcat" 
-			enabled="true"
-			path="C:\ColdFusion11\config\wsconfig\1\isapi_redirect.dll" />
-	</isapiFilters>
+```xml
+<isapiFilters>
+	<remove name="tomcat" />
+	<filter 
+		name="tomcat" 
+		enabled="true"
+		path="C:\ColdFusion11\config\wsconfig\1\isapi_redirect.dll" />
+</isapiFilters>
+```
+
 
 This overrides the IIS server's tomcat ISAPI Filter with a local entry for the website. A quick restart of IIS again, and the issue was solved, no more 500 errors. We were able to move forward with configuring ColdFusion 11 through the temporary site:
 

@@ -22,14 +22,16 @@ Part of the issue here was that Pygments has a CFML lexer - Rouge does not - but
 
 The lack of a CFML lexer lead me to believe that the real problem was with how Rouge was parsing my markdown. It didn't recognize the code, so the classes it was applying were not accurate. If I could tell Rouge not to apply specific syntax highlighting, I reasoned that that should resolve the problem. A little digging lead me to the [kramdown's configuration for highlighting with Rouge](http://kramdown.gettalong.org/syntax_highlighter/rouge.html). Within its syntax highlighting options, you can set a default language. So, I ended up with setup in my *_config.yml*:
 
-	highlighter: rouge
-	markdown: kramdown
-	kramdown:
-		input: GFM
-		hard_wrap: false
-		syntax_highlighter: rouge
-		syntax_highlighter_opts:
-			default_lang: text
+```text	
+highlighter: rouge
+markdown: kramdown
+kramdown:
+	input: GFM
+	hard_wrap: false
+	syntax_highlighter: rouge
+	syntax_highlighter_opts:
+		default_lang: text
+```
 			
 By defaulting the syntax highlighting to plain text, I was able to remove all of the highlighting classes that were being applied and have the code output cleanly:
 
