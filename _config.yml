@@ -6,7 +6,7 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    default_lang: text
+    default_lang: cfc
    ## line_numbers: true
 url: http://mjclemente.github.io
 title: Matthew J. Clemente
