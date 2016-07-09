@@ -43,7 +43,10 @@ You'll see `log()` has additional optional arguments that basically map onto `wr
 	}
 
 Because it is executing `callStackGet()`, and it is being called by the `log()` function, it needs to reach back 3 positions in the array to get information about the template/function being logged. The final result is a clean, helpful, consistently formatted log message that looks like this:
-
-	File Move Failed - Template: D:\webroot\applicationname\model\services\file.cfc - Line Number: 84 - FW/1: applicationname:files.savefile - Method: uploadFile 
+	
+```text
+File Move Failed - Template: D:\webroot\applicationname\model\services\file.cfc - Line Number: 84 - FW/1: applicationname:files.savefile - Method: uploadFile 
+```
+	
 	
 It's easy to read, provides the necessary information, and makes it really simple to begin addressing the potential problem. 
