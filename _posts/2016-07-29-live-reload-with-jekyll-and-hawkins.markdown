@@ -12,7 +12,7 @@ I use [LightPaper](http://lightpaper.42squares.in/) to blog. It's the best Markd
 
 ## The Solution: Hawkins
 
-My initial search for "jekyll realtime refresh" lead to a bunch of dated posts about using Grunt, Gulp, Browsersyc, `guard-livereload`, a Chrome plugin, and/or some ruby scripts to make it happen; all of which seemed like a lot more work that I wanted to do. A revised Google search, that included the year, did the trick: "jekyll refresh on save 2016". Halfway down the results page, I saw a post on [talk.jekyllrb.com](https://talk.jekyllrb.com/) from this year: [A tool for automatic browser refreshes](https://talk.jekyllrb.com/t/a-tool-for-automatic-browser-refreshes/2150).
+My initial search for "jekyll realtime refresh" lead to a bunch of dated posts about using Grunt, Gulp, Browsersyc, `guard-livereload`, a Chrome plugin, and/or some ruby scripts to make it happen; all of which seemed like a lot more work that I wanted to do.[^3] A revised Google search, that included the year, did the trick: "jekyll refresh on save 2016". Halfway down the results page, I saw a post on [talk.jekyllrb.com](https://talk.jekyllrb.com/) from this year: [A tool for automatic browser refreshes](https://talk.jekyllrb.com/t/a-tool-for-automatic-browser-refreshes/2150).
 
 The tool, which is exactly what I was looking for, is [Hawkins](https://github.com/awood/hawkins), by [@awood](https://github.com/awood). What is Hawkins, exactly? To parrot the README:
 
@@ -47,3 +47,5 @@ Happy blogging!
 <hr />
 [^1]: Mou, MacDown, Byword, iA Writer, plugins for Sublime Text 3, to name a few. None of them bad; they're just not at quite the same level.
 [^2]: Here are two basic example: 1) They handle escaping special characters differently, which can result in some very funky looking output. 2) LightPaper's syntax highlighting is not as robust.
+[^3]: Update (8/1/2016): In the comments, [@bdavidxyz](https://github.com/bdavidxyz) mentioned his project [Impatient Jekyll](http://bdavidxyz.github.io/impatient-jekyll/), which provides live-reload and more. If you'd like a more full featured dev environment for Jekyll, without that much more work, you should check it out.
+
