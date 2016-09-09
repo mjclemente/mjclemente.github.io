@@ -98,7 +98,7 @@ And here's the result:
 ![Mailguncfc email validation dump](/public/assets/images/mailguncfc-validation-dump.png)
 
 
-So, there you have it. Here's the closing TL;DR. 1) There's a lot of problems with CFML email validation. 2) Mailgun's email validation service is far more accurate than other approaches. 3) It's really easy to use. Don't reinvent the wheel; you should probably be validating email with Mailgun.
+So, there you have it. Here's the closing TL;DR. 1) There's a lot of problems with CFML email validation. 2) Mailgun's email validation service is far more accurate than other approaches. 3) It's really easy to use. Don't reinvent the wheel; you should probably be validating email with Mailgun.[^6]
 
 <hr />
 [^1]: You can sign up for free, no credit card required, and use their sandbox server to send 300 emails a day (to 5 authorized recipients), or add your own domain and send 10,000 a month for free. In my opinion, that's a developer friendly service. You do need a mobile phone number as well.
@@ -106,3 +106,4 @@ So, there you have it. Here's the closing TL;DR. 1) There's a lot of problems wi
 [^3]: [RCF 2822, section 3.2.4](https://tools.ietf.org/html/rfc2822#section-3.2.4)
 [^4]: For more on this, see [Ben Nadel's post](http://www.bennadel.com/blog/2593-isvalid-accepts-emails-with-leading-and-trailing-whitespace-in-coldfusion.htm) and then try to understand how [this bug](https://bugbase.adobe.com/index.cfm?event=bug&id=3725691) was closed as "NotABug".
 [^5]: Dominic Watson has an older, but more fully fleshed out Mailgun API wrapper: <https://github.com/DominicWatson/cfmailgun>. It was set up for version 2 of their API, though I think most of the methods should still work with v3. However, it does not contain the validation methods.
+[^6]: Update (9/2/2016): For those not comfortable relying on a third-party - in the comments, [@JamoCA](https://github.com/JamoCA) mentioned an [alternative approach](/2016/09/01/validating-email-with-mailgun-coldfusion.html#comment-2873168061). Check it out - it's certainly better than `isValid()` and has most of the benefits of using Mailgun.
