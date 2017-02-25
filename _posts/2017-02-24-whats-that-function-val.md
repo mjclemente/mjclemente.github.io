@@ -7,7 +7,7 @@ tags: [coldfusion,what's that function]
 What's the name of that function? The one that converts the opening numbers of a string into a numeric value? I always forget. For the record, it's `val()`.
 
 <!--more-->
-I probably forget the name because it's... not particularly clear or helpful in conveying it's purpose. Here are the [official Adobe docs](https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/val.html) and, for runnable examples, check out [cfdocs.org/val](http://cfdocs.org/val).
+I probably forget the name because it's... not particularly clear or helpful in conveying its purpose. Here are the [official Adobe docs](https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/val.html) and, for runnable examples, check out [cfdocs.org/val](http://cfdocs.org/val).
 
 So, why was I trying to remember it; that is, what good is `val()`? The most common use I have had for it is a convenient method for dealing with the status codes returned from http requests. The `statusCode` response from `cfhttp` requests comprised of two parts:
 
