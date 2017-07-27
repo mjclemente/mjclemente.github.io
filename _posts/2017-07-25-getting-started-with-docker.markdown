@@ -24,4 +24,4 @@ Our team is planning on moving to Docker in the coming months. After attending a
 $HOME/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
 ```
 	
-Admittedly, there's nothing particularly insightful or complicated here. However, sometimes the hardest part of learning/using a new technology is overcoming inertia and just getting started. Next, I'll be diving into getting the Lucee CFML engine up and running on my Docker setup. 
+Admittedly, there's nothing particularly insightful or complicated here. However, sometimes the hardest part of learning/using a new technology is overcoming inertia and just getting started. Next, I dive into [getting the Lucee CFML engine up and running on my Docker setup](/2017/07/26/getting-started-with-coldfusion-for-docker.html). 
