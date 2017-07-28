@@ -2,7 +2,7 @@
 published: true
 title: A Complete Beginner Gets Started Using Docker (Mac)
 layout: post
-tags: [Docker,Lucee]
+tags: [docker,lucee]
 ---
 
 Our team is planning on moving to Docker in the coming months. After attending a number of Docker-related sessions at [cf.Objective()](http://www.cfobjective.com/) this past week, it seemed time to get my hands dirty and actually start working with it. The following is a painfully simple walkthrough of the steps I took to go from zero-to-Docker. 
