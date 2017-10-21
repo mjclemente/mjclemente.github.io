@@ -43,7 +43,7 @@ $ tail -f ~/path/to/the/log/file.log
 You can also do this in Windows now, using Powershell. For example:
 
 ```shell_session
-$ Get-Content  cf_root\logs\coldfusion-out.log -Tail 2 -Wait
+$ Get-Content  cf_root/logs/coldfusion-out.log -Tail 2 -Wait
 ```
 
 Two final notes; keep in mind that  1) the log files mentioned include a lot more information than just `cfmail` debugging, and 2) debugging `cfmail` generates a lot of output, so keep an eye on the size of your log files. Happy emailing!
