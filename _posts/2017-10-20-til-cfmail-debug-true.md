@@ -36,13 +36,13 @@ If you're a CFML developer who is intimidated by the phrase 'tailing a log file'
 
 Tailing the log files mentioned above, while the `cfmail` debugging attribute is set to true, provides a live stream of the emails your application is sending. Most people are familiar with tailing on Linux/Mac: 
 
-```shell_session
+```console
 $ tail -f ~/path/to/the/log/file.log
 ```
 
 You can also do this in Windows now, using Powershell. For example:
 
-```shell_session
+```console
 $ Get-Content  cf_root/logs/coldfusion-out.log -Tail 2 -Wait
 ```
 
