@@ -39,11 +39,11 @@
 .highlight .gi {
   color: #b2fd6d;
 }
+.highlight .go { color: #93a1a1 } /* Generic.Output */
 .highlight .ge {
   font-style: italic;
 }
-.highlight .gs {
-}
+.highlight .gs { color: #93a1a1; font-weight: bold } /* Generic.Strong */
 .highlight .gt {
   color: #dee5e7;
   background-color: #4e5d62;
