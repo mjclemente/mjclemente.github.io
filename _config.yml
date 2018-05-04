@@ -8,7 +8,6 @@ kramdown:
   syntax_highlighter_opts:
     default_lang: cfc
    ## line_numbers: true
-url: https://blog.mattclemente.com
 title: Matthew J. Clemente
 tagline: Always Trying to Be Better
 description: Always trying to be better
