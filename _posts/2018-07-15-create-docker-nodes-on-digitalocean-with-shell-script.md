@@ -45,7 +45,7 @@ DigitalOcean has a [robust API](https://developers.digitalocean.com/documentatio
 
 ## Environment Variables
 
-You'll need to set up a few ENV variables for this. The `docker-machine` script will use these when creating the Docker hosts. I'm not going to tell you how to do set the environment variables because it's going to depend on your setup. The first two listed here are required, the rest are optional (and will be explained further in the next section). Here's what they need to be:
+You'll need to set up a few ENV variables for this. The `docker-machine` script will use these when creating the Docker hosts. I'm not going to tell you how to set the environment variables because it's going to depend on your setup. The first two listed here are required, the rest are optional (and will be explained further in the next section). Here's what they need to be:
 
 * __SSH_FINGERPRINT__ _(required)_ The fingerprint for the SSH public key we added to our DigitalOcean account earlier.
 * __DO_TOKEN__ _(required)_ DigitalOcean personal access token for the API that we created.
@@ -58,12 +58,12 @@ Obviously, when you're scripting the creation of VMs, you want control over the 
 So what exactly are your available options for `DO_SIZE`, `DO_IMAGE`, and `DO_REGION`? And what are the defaults if you don't set them? Read on, and I'll break it down.
 
 ## Configuring Droplets with Optional Variables
-Docker Machine has a built-in driver for DigitalOcean that comes with a host of options for configuring the VMs. You'll probably find it helpful to read the [docs for the Digital Ocean driver](https://docs.docker.com/machine/drivers/digital-ocean/) - especially if you want to further customize your setup further.
+Docker Machine has a built-in driver for DigitalOcean that comes with a host of options for configuring the VMs. You'll probably find it helpful to read the [docs for the Digital Ocean driver](https://docs.docker.com/machine/drivers/digital-ocean/) - especially if you want to customize your setup further.
 
 When creating a Droplet through the website, choices for the image, size, and region are clearly presented and you can click to find the one you want. For example, here's the image selection:
 ![DigitalOcean Select Droplet Image](/public/assets/images/digitalocean-choose-image.png)
 
-Each of these options has a corresponding slug for use from the command-line - these are the slugs used for the environment variables. While I couldn't find an online listing of them, you can get these slugs and their descriptions via DigitalOcean's API and/or by using their offical command-line client: __`doctl`__. In both cases, you'll need the API access token created earlier.
+Each of these options has a corresponding slug for use from the command-line - these are the slugs used for the environment variables too. While I couldn't find an online listing of them, you can get these slugs and their descriptions via DigitalOcean's API and/or by using their offical command-line client: __`doctl`__. In both cases, you'll need the API access token created earlier. Let's take a look at how it's done.
 
 ### Listing Resource Slugs with the API
 This is the quickest way to get a list of slugs for available images, sizes, and regions - but the data returned isn't as easy to read as data returned via `doctl`. Using `curl`, [Postman](https://www.getpostman.com/), or one of the [DigitalOcean API libraries](https://developers.digitalocean.com/libraries/) , you can make GET requests for each type of resource[^3]:
@@ -147,7 +147,7 @@ With the servers up and running, our next step will be Swarm configuration and s
 I'm still new to this, so one of my aims is to keep things simple; I want a process and tooling that works and that I understand. If you know of superior approaches, I'd love to hear about them.
 
 ___
-[^1]:If you have issues with setting up your account or SSH keys, feel free to let me know in the comments - I'm happy to lend any help that I can. Or, just use their support - it's really good.
+[^1]:If you have issues with setting up your account or SSH keys, feel free to let me know in the comments - I'm happy to lend any help that I can. Or, just use DigitalOcean's support.
 [^2]:There are also ways to retrieve existing SSH key fingerprints. For example, on my Mac, I can run `ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub` and the fingerprint is returned. But why go through the hassle when you've already added the key to your DigitalOcean account and they show you the fingerprint?
 [^3]:Add the query param `per_page=200` to the end of any of these so that you don't need to page the results.
 [^4]:For what it's worth, as Mac user who doesn't use Homebrew, I ran `curl -sL https://github.com/digitalocean/doctl/releases/download/v1.8.3/doctl-1.8.3-darwin-10.6-amd64.tar.gz | tar -xzv` to download and extract the binary, and then moved it to my path, in `/usr/local/bin`.
