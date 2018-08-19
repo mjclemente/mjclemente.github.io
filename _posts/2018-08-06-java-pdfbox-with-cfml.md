@@ -2,7 +2,7 @@
 published: true
 title: Using PDFBox with ColdFusion
 layout: post
-tags: [pdfbox,java,cfml,coldfusion,pdfbox.cfc,pdfs]
+tags: [pdfbox, java, cfml, coldfusion, pdfbox.cfc, pdfs]
 ---
 This post started as an investigation of how best to extract text from a PDF; it then turned into an exploration of [PDFBox](https://pdfbox.apache.org/), lead me down the rabbit hole of PDF sanitization, and ultimately resulted in developing [pdfbox.cfc](https://github.com/mjclemente/pdfbox.cfc).
 <!--more-->

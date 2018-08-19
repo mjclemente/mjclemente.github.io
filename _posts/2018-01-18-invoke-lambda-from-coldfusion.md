@@ -2,20 +2,20 @@
 published: true
 title: Invoke Lambda from ColdFusion
 layout: post
-tags: [coldfusion,aws,lambda,lambda.cfc]
+tags: [coldfusion, aws, lambda, lambda.cfc]
 ---
-At Adobe's ColdFusion Summit (2017), I was able to attend [Brian Klaas's](https://github.com/brianklaas) presentation, "Level Up Your Web Apps With Amazon Web Services." Brian is an engaging speaker - he conveyed excitement, knowledge, and real-world insights into the often overwhelming AWS ecosystem. I was particularly intrigued when he explained that ColdFusion could interact directly with AWS, via the Java SDK. 
+At Adobe's ColdFusion Summit (2017), I was able to attend [Brian Klaas's](https://github.com/brianklaas) presentation, "Level Up Your Web Apps With Amazon Web Services." Brian is an engaging speaker - he conveyed excitement, knowledge, and real-world insights into the often overwhelming AWS ecosystem. I was particularly intrigued when he explained that ColdFusion could interact directly with AWS, via the Java SDK.
 <!--more-->
 
 ## The backstory
 
-Our first attempt to use [AWS Lambda](https://aws.amazon.com/lambda/) at work, while ultimately successful, was not without frustration. Most of the difficulties arose due to our use of Amazon's [API Gateway](https://aws.amazon.com/api-gateway/) as the trigger for our Lambda Function. Working with two AWS services meant that, along with an increased cost, there was more to learn, configure, and debug - largely undermining the promise of simply calling a serverless function. 
+Our first attempt to use [AWS Lambda](https://aws.amazon.com/lambda/) at work, while ultimately successful, was not without frustration. Most of the difficulties arose due to our use of Amazon's [API Gateway](https://aws.amazon.com/api-gateway/) as the trigger for our Lambda Function. Working with two AWS services meant that, along with an increased cost, there was more to learn, configure, and debug - largely undermining the promise of simply calling a serverless function.
 
-However, Brian demonstrated that we could, in fact, just *invoke Lambda from ColdFusion*; there was no need to use a second service as a trigger. The sample code from his presentation is [available on Github](https://github.com/brianklaas/awsPlaybox). I started there, with the goal of putting together a CFML component for directly invoking Lambda functions. Fortunately, Brian had already done the hardest part - setting up the objects and process necessary to use the Java SDK. 
+However, Brian demonstrated that we could, in fact, just *invoke Lambda from ColdFusion*; there was no need to use a second service as a trigger. The sample code from his presentation is [available on Github](https://github.com/brianklaas/awsPlaybox). I started there, with the goal of putting together a CFML component for directly invoking Lambda functions. Fortunately, Brian had already done the hardest part - setting up the objects and process necessary to use the Java SDK.
 
 ## lambda.cfc - A Component for Invoking AWS Lambda
 
-[Lambda.cfc](https://github.com/mjclemente/lambda.cfc) is effectively a wrapper for the AWS SDK, abstracting away its complexity, and providing a simple interface for invoking Lambda functions. I believe that I documented the component fairly well in the [Github repository](https://github.com/mjclemente/lambda.cfc), so head over there if you're interested in the details of setup and configuration. 
+[Lambda.cfc](https://github.com/mjclemente/lambda.cfc) is effectively a wrapper for the AWS SDK, abstracting away its complexity, and providing a simple interface for invoking Lambda functions. I believe that I documented the component fairly well in the [Github repository](https://github.com/mjclemente/lambda.cfc), so head over there if you're interested in the details of setup and configuration.
 
 Here's a basic example of how it works:
 

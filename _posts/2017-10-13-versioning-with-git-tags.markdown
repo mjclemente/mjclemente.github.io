@@ -2,7 +2,7 @@
 published: true
 title: Versioning With Git Tags
 layout: post
-tags: [git,github,tags]
+tags: [git, github, tags]
 ---
 Admission: I've only recently started using tags to version my Git repositories. I had the (mistaken) idea that the process was difficult and never bothered learning the specifics. Working more with open source projects eventually lead to the realization that tags and versioning provided a developer-friendly road-map for interacting with the codebase. When I decided to familiarize myself with Git's tagging workflow, I was pleasantly surprised how simple it was.
 <!--more-->
@@ -21,7 +21,7 @@ $ git merge develop
 Updating xxxxxxx..xxxxxxx
 Fast-forward
 ```
- 
+
 3\. Tag `master` with the version you want to assign. You can see the syntax in the example below. The `-a` means that this is an annotated tag, followed by the version. Annotated tags include a message, which you specify with `-m`.
 
 ```shell_session
@@ -34,7 +34,7 @@ $ git tag -a v0.0.1 -m "Put your message about the version here."
 $ git push
 ```
 
-5\. Push the tag. *Git doesn't automatically push tags, when you push commits*. You'll forget this, because it's not intuitive, but there it is. 
+5\. Push the tag. *Git doesn't automatically push tags, when you push commits*. You'll forget this, because it's not intuitive, but there it is.
 
 ```shell_session
 $ git push origin v0.0.1

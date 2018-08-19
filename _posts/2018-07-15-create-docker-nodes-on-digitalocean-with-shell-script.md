@@ -2,7 +2,7 @@
 published: true
 title: Scripting Docker Host Creation on DigitalOcean
 layout: post
-tags: [docker,digitalocean,containers, container orchestration]
+tags: [docker, digitalocean, containers, container orchestration]
 ---
 This is the first post in a series about setting up and deploying Docker Swarm for production. We'll lay the foundation for future work by using a simple shell script to set up our servers on DigitalOcean.
 <!--more-->

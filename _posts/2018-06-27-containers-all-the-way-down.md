@@ -2,7 +2,7 @@
 published: true
 title: It's containers all the way down
 layout: post
-tags: [docker,digitalocean,containers, container orchestration]
+tags: [docker, digitalocean, containers, container orchestration]
 ---
 I haven't had a lot of time to blog recently. Why? In a word: Docker. At work we're moving toward a fully containerized stack, from development to production, so I've needed to spend every free minute trying to learn the ins-and-outs of container orchestration. Two initial takeaways: 1) it's still not as easy as it could be, and 2) it's not as hard as some make it out to be.
 <!--more-->

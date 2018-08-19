@@ -2,9 +2,9 @@
 published: true
 title: Parsing AWS ARNs with CFML
 layout: post
-tags: [coldfusion,aws,lambda]
+tags: [coldfusion, aws, lambda]
 ---
-I've recently begun working on a CFML project that involves interacting with [AWS Lambda](https://aws.amazon.com/lambda/). I'll be posting more on that later, but one of the helpful bits of code that came out of the project was a small function to parse Amazon Resource Names (ARNs) into their component parts. 
+I've recently begun working on a CFML project that involves interacting with [AWS Lambda](https://aws.amazon.com/lambda/). I'll be posting more on that later, but one of the helpful bits of code that came out of the project was a small function to parse Amazon Resource Names (ARNs) into their component parts.
 <!--more-->
 
 Why would you want to parse an ARN? Because they contain a lot of information - including the AWS service, region, account, and resource identifier. Extracting that information from the ARN means you don't need to input it separately.
@@ -63,7 +63,7 @@ You should get back a struct with the resource information:
 
 A few notes in closing:
 
-* AWS has a staggering range of services, some of which deviate from the standard ARN format. Bottom line, this won't work for every ARN; it's a basic parser. 
+* AWS has a staggering range of services, some of which deviate from the standard ARN format. Bottom line, this won't work for every ARN; it's a basic parser.
 * You'll need to remove the `var` scoping if you're not using this within a CFC... but you should probably be using it in a CFC.
 * It uses member functions, so you won't be able to use it on ACF 10, though the changes to backport it should be trivial.
 

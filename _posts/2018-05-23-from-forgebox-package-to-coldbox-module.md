@@ -2,7 +2,7 @@
 published: true
 title: Building My First ColdBox Modules
 layout: post
-tags: [coldfusion,cfml,forgebox,coldbox]
+tags: [coldfusion, cfml, forgebox, coldbox]
 ---
 Ok, the title isn't entirely accurate. The process discussed here isn't so much "building" a module as "adding ColdBox functionality" to an existing ForgeBox package - *boxifying* it, one might say. I've never built a ColdBox application, but I've been increasingly interested in the framework, so this was a helpful and straightfoward first step toward better understanding it.
 
