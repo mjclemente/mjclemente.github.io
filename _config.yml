@@ -14,3 +14,6 @@ tagline: Always Trying to Be Better
 description: Always trying to be better
 plugins: [jekyll-paginate]
 paginate: 5
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
