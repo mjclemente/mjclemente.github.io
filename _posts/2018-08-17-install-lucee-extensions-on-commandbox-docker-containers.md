@@ -31,6 +31,11 @@ Installing the Memcached extension for Lucee 5.x ](https://labs.daemon.com.au/t/
 ENV LUCEE_EXTENSIONS "16FF9B13-C595-4FA7-B87DED467B7E61A0;name=Memcached;version=3.0.2.29"
 ```
 
+___
+Update (10/22/2018): John Berquist, a CFML developer I really respect and admire, is developing a fairly comprehensive CommandBox module for managing Lucee server extensions: **[commandbox-lex](https://github.com/jcberquist/commandbox-lex)**. I'm looking forward to trying it out.
+
+___
+
 Note that if you use one of the latter two strategies, you also need to prewarm the server, so that it can recognize and install the extensions. Depending on your use case, you may any one of these approaches acceptable.
 
 ## Using the `docker-lex-install` CommandBox module
