@@ -27,7 +27,7 @@ After a few searches, I reached the conclusion that the community had settled on
 
 Bottom line, there are two versions of the extension - use the one that matches your Lucee install. For us, this was Lucee 5.
 
-It's worth noting, at this point, Julian Halliwell's [cfsimplicity/lucee-spreadsheet](https://github.com/cfsimplicity/lucee-spreadsheet) library. It's a commonly used approach for handling spreadsheets in Lucee and it looks like it provides dozens of very helpful [functions not found in ColdFusion](https://github.com/cfsimplicity/lucee-spreadsheet#extra-functions-not-available-in-coldfusion). However, be aware that it does not replicate Adobe's functionality - using the library requires rewriting the portions of your application that interact with spreadsheets. So, while it's an excellent solution for some use cases, we didn't want to take this approach while migrating our app.
+It's worth noting, at this point, Julian Halliwell's [cfsimplicity/lucee-spreadsheet](https://github.com/cfsimplicity/lucee-spreadsheet) library. It's a commonly used approach for handling spreadsheets in Lucee and it looks like it provides dozens of very helpful [functions not found in ColdFusion](https://github.com/cfsimplicity/lucee-spreadsheet#extra-functions-not-available-in-coldfusion). However, be aware that it does not replicate Adobe's syntax - using the library requires rewriting the portions of your application that interact with spreadsheets. So, while it's an excellent solution for some use cases, we didn't want to take this approach while migrating our app.
 
 ### Mistake #3: Using `box install`
 
