@@ -78,6 +78,8 @@ The module and its settings have a [dedicated page](https://commandbox.ortusbook
 * **licenseLeaseTimeout**: Mapped to the Java property `frlicenseservice.leasetime.hint`. This sets the number of minutes of inactivity before the license is released. Note that the minimum value is 10.
 * **cloudGroup**: Mapped to the `fr.cloud.group` Java property. These group names are really helpful in organizing your reporting and alerts within FusionReactor Cloud. They're effectively tags for organizing your servers.
 
+Assuming that the rest of your CFML stack is in order, with your `box.json` and `server.json` configured, you're ready to deploy to Swarm. The resulting CFML containers will be monitored within the FusionReactor Cloud portal and their licenses will automatically be deactivated as the containers are replaced.
+
 ## Some Final Notes
 
 Getting FusionReactor installed in your containers and deployed to Swarm is half the process; the second half is working through the differences between the on-premise installation and FusionReactor Cloud. In my next post, I plan on examining some of those differences and discussing the process of setting up FR Cloud alerts that mirror the on-premise functionality. Until then, good luck Dockering!
