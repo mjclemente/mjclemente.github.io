@@ -7,7 +7,7 @@ tags: [lucee, docker, fusionreactor, cfml, coldfusion]
 Moving a standard ColdFusion installation to Docker Swarm requires rethinking - and frequently rewiring - portions of our infrastructure. Today, that means reconfiguring how we deploy FusionReactor to monitor our applications.
 <!--more-->
 
-If you're already using FusionReactor, you know its value (and if you're not using it, you probably should be).[^1] Moving to Swarm means that you can't continue to use the traditional on-premise installation of FusionReactor; it's not suited to the distributed, dynamic environment of containers. Fortunately, there's an alternative:  [FusionReactor Cloud](https://www.fusion-reactor.com/fusionreactor-cloud/).
+If you're already using FusionReactor, you know its value (and if you're not using it, you probably should be).[^1] Moving to Swarm means that you can't continue to use the traditional on-premise installation of FusionReactor; it's not suited to the distributed, dynamic environment of containers. Fortunately, there's an alternative: [FusionReactor Cloud](https://www.fusion-reactor.com/fusionreactor-cloud/).
 
 In this post, I'll outline one approach to deploying your applications with FusionReactor Cloud.
 Here's what's discussed:
@@ -15,7 +15,7 @@ Here's what's discussed:
 * TOC
 {:toc}
 
-Note, this post assumes a fair degree of familiarity with Docker Swarm and CommandBox. If I gloss over details you think are important, please let me know and I'd be happy to clarify.
+Two notes; first, this post assumes a degree of experience with Docker Swarm and CommandBox - configuring FusionReactor to monitor CFML apps on Docker Swarm isn't of much use unless you've already worked out the process of deploying those apps. Second, there's a lot of moving pieces here, so if I gloss over details you think are important, please let me know and I'd be happy to clarify.
 
 ## FusionReactor Cloud
 
