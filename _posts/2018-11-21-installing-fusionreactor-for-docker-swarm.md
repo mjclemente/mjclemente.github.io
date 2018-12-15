@@ -73,7 +73,7 @@ The FusionReactor module and its settings have a [dedicated page](https://comman
 ```
 
 ___
-Update (12/14/2018): The `jvm` key and `args` were added, following a discussion with FusionReactor support. I explain them [in this followup post](2018-12-14-update-to-fusionreactor-cloud-configuration-on-swarm.md).
+Update (12/14/2018): The `jvm` key and `args` were added, following a discussion with FusionReactor support. I explain them [in this followup post](/2018/12/14/update-to-fusionreactor-cloud-configuration-on-swarm.html).
 
 ___
 
@@ -84,14 +84,14 @@ Here's a breakdown of the settings used above, beneath the `fusionreactor` key:
 * **licenseDeactivateOnShutdown**: This maps to the FusionReactor Java property[^4] `frlicenseservice.deactivateOnShutdown`. When set to `true`, the instance being monitored will deactivate its license on shutdown. Obviously, that's what you want for a containerized server.
 * ~~**licenseLeaseTimeout**: Mapped to the Java property `frlicenseservice.leasetime.hint`. This sets the number of minutes of inactivity before the license is released. Note that the minimum value is 10.~~
 
-  See the [update to this post](2018-12-14-update-to-fusionreactor-cloud-configuration-on-swarm.md) for more on why *licenseLeaseTimeout* is not needed for Cloud deployments.
+  See the [update to this post](/2018/12/14/update-to-fusionreactor-cloud-configuration-on-swarm.html) for more on why *licenseLeaseTimeout* is not needed for Cloud deployments.
 * **cloudGroup**: Mapped to the `fr.cloud.group` Java property. These group names are really helpful in organizing your reporting and alerts within FusionReactor Cloud. They're effectively tags for organizing your servers.
 
 Assuming that the rest of your CFML stack is in order, with your `box.json` and `server.json` configured, you're ready to deploy to Swarm. The resulting CFML containers will be monitored within the FusionReactor Cloud portal and their licenses will automatically be deactivated as the containers are replaced.
 
 ### Update (12/14/2018)
 
-A discussion with the FusionReactor support team lead to a [followup post](2018-12-14-update-to-fusionreactor-cloud-configuration-on-swarm.md) with some clarification and fine-tuning to aspects of this configuration.
+A discussion with the FusionReactor support team lead to a [followup post](/2018/12/14/update-to-fusionreactor-cloud-configuration-on-swarm.html) with some clarification and fine-tuning to aspects of this configuration.
 
 ## Some Final Notes
 
