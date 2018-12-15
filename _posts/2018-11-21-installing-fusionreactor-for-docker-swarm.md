@@ -1,6 +1,6 @@
 ---
 published: true
-title: Setting Up FusionReactor for Docker Swarm (Part 1)
+title: Setting Up FusionReactor for Docker Swarm (Part 1, Installation)
 layout: post
 tags: [lucee, docker, fusionreactor, cfml, coldfusion]
 ---
@@ -15,7 +15,7 @@ Here's what's discussed:
 * TOC
 {:toc}
 
-Two notes; first, this post assumes a degree of experience with Docker Swarm and CommandBox - configuring FusionReactor to monitor CFML apps on Docker Swarm isn't of much use unless you've already worked out the process of deploying those apps. Second, there's a lot of moving pieces here, so if I gloss over details you think are important, please let me know and I'd be happy to clarify.
+Two notes; first, this post assumes a degree of experience with Docker Swarm and CommandBox - learning to configure FusionReactor to monitor CFML apps on Docker Swarm isn't of much use unless you've already worked out the process of deploying those apps in the first place. Second, there are a lot of moving pieces here, so if I gloss over details you think are important, please let me know and I'd be happy to clarify.
 
 ## FusionReactor Cloud
 
@@ -54,31 +54,44 @@ There are two approaches to ensuring that this module is installed and ready whe
 
 ## Configuration
 
-Because we're using CommandBox, we can configure the FusionReactor module within our `server.json`, beneath the `fusionreactor` key, like so:
+The FusionReactor module and its settings have a [dedicated page](https://commandbox.ortusbooks.com/embedded-server/fusionreactor) within the CommandBox documentation. Thanks to CommandBox, we can configure the module within our `server.json`, like so:
 
 ```json
 {
     "name": "server.name.here",
     "othersettings": "etc. etc. etc.",
+    "jvm": {
+        "args": "-Dfrstartupdelay=30000 -Dfr.odl.activation.retry_amount=10 -Dfr.odl.activation.retry_interval=10000 -Dfrlicenseservice.logMessages=true"
+    },
     "fusionreactor": {
       "enable": true,
       "licenseKey": "${FR_LICENSEKEY}",
       "licenseDeactivateOnShutdown": true,
-      "licenseLeaseTimeout": 10,
       "cloudGroup": "tags,for,organization"
     }
 }
 ```
 
-The module and its settings have a [dedicated page](https://commandbox.ortusbooks.com/embedded-server/fusionreactor) within the CommandBox documentation. Here's a breakdown of the settings used above:
+___
+Update (12/14/2018): The `jvm` key and `args` were added, following a discussion with FusionReactor support. I explain them [in this followup post](2018-12-14-update-to-fusionreactor-cloud-configuration-on-swarm.md).
+
+___
+
+Here's a breakdown of the settings used above, beneath the `fusionreactor` key:
 
 * **enable**: Pretty self explanatory here. If this is set to `false`, FusionReactor functionality is disabled. This might be something you'd want to do for testing or in different environments.
 * **licenseKey**: I'm passing this in via an environment variable set in my stack file. For Docker deployments, this is your FusionReactor Cloud license. In production, you'd want to set the environment variable via a Docker secret.
 * **licenseDeactivateOnShutdown**: This maps to the FusionReactor Java property[^4] `frlicenseservice.deactivateOnShutdown`. When set to `true`, the instance being monitored will deactivate its license on shutdown. Obviously, that's what you want for a containerized server.
-* **licenseLeaseTimeout**: Mapped to the Java property `frlicenseservice.leasetime.hint`. This sets the number of minutes of inactivity before the license is released. Note that the minimum value is 10.
+* ~~**licenseLeaseTimeout**: Mapped to the Java property `frlicenseservice.leasetime.hint`. This sets the number of minutes of inactivity before the license is released. Note that the minimum value is 10.~~
+
+  See the [update to this post](2018-12-14-update-to-fusionreactor-cloud-configuration-on-swarm.md) for more on why *licenseLeaseTimeout* is not needed for Cloud deployments.
 * **cloudGroup**: Mapped to the `fr.cloud.group` Java property. These group names are really helpful in organizing your reporting and alerts within FusionReactor Cloud. They're effectively tags for organizing your servers.
 
 Assuming that the rest of your CFML stack is in order, with your `box.json` and `server.json` configured, you're ready to deploy to Swarm. The resulting CFML containers will be monitored within the FusionReactor Cloud portal and their licenses will automatically be deactivated as the containers are replaced.
+
+### Update (12/14/2018)
+
+A discussion with the FusionReactor support team lead to a [followup post](2018-12-14-update-to-fusionreactor-cloud-configuration-on-swarm.md) with some clarification and fine-tuning to aspects of this configuration.
 
 ## Some Final Notes
 
