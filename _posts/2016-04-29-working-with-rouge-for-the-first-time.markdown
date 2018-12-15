@@ -14,7 +14,7 @@ I wasn't sure exactly where to begin, but I did anyway, which I've found to be a
 $ git clone git@github.com:mjclemente/rouge.git
 ```
 
-There are instructions on the Rouge readme.md for [contributing](https://github.com/jneen/rouge#contributing), so I did my best to follow them. Because I had already [set up Ruby with rbenv](http://blog.mattclemente.com/2016/02/23/getting-started-with-jekyll-part-1.html), I was able to just run `bundle` to install the dev dependencies. That went smoothly, and the result was:
+There are instructions on the Rouge readme.md for [contributing](https://github.com/jneen/rouge#contributing), so I did my best to follow them. Because I had already [set up Ruby with rbenv](/2016/02/23/getting-started-with-jekyll-part-1.html), I was able to just run `bundle` to install the dev dependencies. That went smoothly, and the result was:
 
 `Bundle complete! 10 Gemfile dependencies, 22 gems now installed.`
 
@@ -23,7 +23,7 @@ The next step was to run  `rake`, which, according to the docs, tests the core o
 ```text
 Run `rackup` and visit localhost:9292/:lexer_name to visually test a lexer.
 ```
-	
+
 So, I tried running `rackup` and it didn't work:
 
 ```text
