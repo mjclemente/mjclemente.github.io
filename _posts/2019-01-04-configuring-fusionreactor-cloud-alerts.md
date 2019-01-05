@@ -7,7 +7,7 @@ tags: [lucee, docker, fusionreactor, cfml, coldfusion]
 I blogged, in two [earlier](/2018/11/21/installing-fusionreactor-for-docker-swarm.html) [posts](/2018/12/14/update-to-fusionreactor-cloud-configuration-on-swarm.html), about installing and deploying FusionReactor Cloud to monitor CFML applications on Docker Swarm. The next step is to to configure its updated alerting system to let you know if anything is amiss.
 <!--more-->
 
-The following is a not-exactly-brief guide to FusionReactor Cloud Alerting. While my use case is Docker Swarm, much of this is equally applicable to non-containerized applications and servers. I originally planned to include the process of migrating on-premise alerts to FusionReactor Cloud. However, this article grew a bit long, so that will need to wait for next post.
+The following is a not-exactly-brief guide to FusionReactor Cloud Alerting. While my use case is Docker Swarm, much of this is equally applicable to non-containerized applications and servers. I originally planned to include the process of migrating on-premise alerts to FusionReactor Cloud. However, this article grew a bit long, so that will need to wait for the next post.
 
 Without further ado, let's get familiar with the robust alerting interface that FusionReactor Cloud provides.
 
