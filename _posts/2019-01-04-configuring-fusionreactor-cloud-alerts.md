@@ -61,7 +61,7 @@ In the Alerting section, within the Checks sub-menu, click **+Check** in the upp
 
 ![FusionReactor Cloud Checks Tab][fr-cloud-checks-tab]
 
-Within this panel there's a lot going on. I'll walk through the options one step at time, but we'll saving actually creating a Check for the next blog post.
+Within this panel there's a lot going on. I'll walk through the options one step at time, but we'll save actually creating a Check for the next blog post.
 
 1. There are two types of Checks, *Threshold* and *Status*.
 
