@@ -1,6 +1,6 @@
 ---
 published: true
-title: Setting Up FusionReactor for Docker Swarm (Part 1, Installation)
+title: FusionReactor for Docker Swarm (Part 1, Installation)
 layout: post
 tags: [lucee, docker, fusionreactor, cfml, coldfusion]
 ---
