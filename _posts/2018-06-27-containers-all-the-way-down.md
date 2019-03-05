@@ -19,8 +19,8 @@ Right now, I'm one of those small-team developers. I enjoy and focus on applicat
 ## Learning from Docker Pros
 There are some helpful resources out there (if you've found any that were particularly enlightening, please let me know). For example, if you're interested in learning Docker, I recommend [Bret Fisher's](https://www.bretfisher.com/) Udemy course, [Docker Mastery](https://www.udemy.com/docker-mastery/) and the still-under-development release of his [Swarm Mastery](https://www.udemy.com/docker-swarm-mastery/) course. A lot of what I'll be exploring will be based on Bret's demos, examples, and [GitHub repositories](https://github.com/BretFisher).
 
-## Digital Ocean
-Because the ultimate goal here is containers in production, we'll need actual remote hosts. For this, I'll be using Digital Ocean. They're affordable, developer friendly, and have a clean, intuitive interface. Docker developers that I respect, including Bret and the team at [Ortus Solutions](https://www.ortussolutions.com/) recommend them, so that's good enough for me. You can get [$10 off if you sign up using my referral link](https://m.do.co/c/cd8c044be956).
+## DigitalOcean
+Because the ultimate goal here is containers in production, we'll need actual remote hosts. For this, I'll be using DigitalOcean. They're affordable, developer friendly, and have a clean, intuitive interface. Docker developers that I respect, including Bret and the team at [Ortus Solutions](https://www.ortussolutions.com/) recommend them, so that's good enough for me. You can get a [$100 promo if you sign up using my referral link](https://m.do.co/c/8acbd6928587).
 
 ## Next Steps
 I'm writing this, with the hope that putting it out there will actually make me follow through and do it. One of my goals is to set up and deploy my own "production" Swarm. That is, an app, codebase, and workflow that I use and can share with other developers. Future posts will, hopefully, be steps toward that goal.

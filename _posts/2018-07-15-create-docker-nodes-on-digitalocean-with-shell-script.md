@@ -29,7 +29,7 @@ The `docker-machine` commands we'll be using require us to set up a few things w
 
 ## Setting up a DigitalOcean Account
 
-I'm going to be using actual remote VMs for these examples, as I've found this imparts far more practice knowledge than a local setup with VirtualBox, Hyper-V, or a single node swarm. If you'd like to follow along, you'll also need an account with DigitalOcean (You can get [$10 off if you sign up using my referral link](https://m.do.co/c/cd8c044be956).)
+I'm going to be using actual remote VMs for these examples, as I've found this imparts far more practice knowledge than a local setup with VirtualBox, Hyper-V, or a single node swarm. If you'd like to follow along, you'll also need an account with DigitalOcean (You can get a [$100 promo if you sign up using my referral link](https://m.do.co/c/8acbd6928587).)
 
 After signing up, confirming your email, and providing your credit card information, DigitalOcean takes you to a page where you can create Droplets (VMs). _We're not going to do that_, because we want to handle Droplet creation programmatically.
 
@@ -84,8 +84,8 @@ You'll need to throw the resulting JSON into a formatter to actually read it and
 Once you've installed the tool and authenticated with your personal access token[^5], you'll have easy access to list available resource options:
 
 * __Images__: `doctl compute image list-distribution --public`
-* __Sizes__: `doctl compute region list`
-* __Regions__: `doctl compute size list`
+* __Sizes__:  `doctl compute size list`
+* __Regions__: `doctl compute region list`
 
 The information returned is well formatted, and locating the slug of the resource you're interested in is easy. Here's a snapshot of some of the available images:
 ![doctl image list](/public/assets/images/doctl-image-list-format.png)
