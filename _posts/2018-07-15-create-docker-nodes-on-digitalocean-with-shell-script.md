@@ -7,6 +7,12 @@ tags: [docker, digitalocean, containers, container orchestration]
 This is the first post in a series about setting up and deploying Docker Swarm for production. We'll lay the foundation for future work by using a simple shell script to set up our servers on DigitalOcean.
 <!--more-->
 
+___
+
+**Update - 03/04/2019**: I've written an updated version of this post: [Scripting Docker Host Creation on DigitalOcean without Docker Machine](/2019/03/04/script-docker-host-creation-digitalocean-doctl.html). Instead of using Docker Machine, it uses DigitalOcean's CLI tool, `doctl`, to create the Droplets.
+
+___
+
 As this ended up being a rather long post, here's a table of contents for easier navigation.
 * TOC
 {:toc}
