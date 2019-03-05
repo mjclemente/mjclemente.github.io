@@ -3,3 +3,8 @@
   color: #faf6e4;
   background-color: #202020;
 }
+/* Lists */
+#markdown-toc ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
