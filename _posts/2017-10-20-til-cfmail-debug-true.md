@@ -1,6 +1,6 @@
 ---
 published: true
-title: TIL - cfmail debug=true
+title: "TIL: cfmail debug=true"
 layout: post
 tags: [coldfusion, til]
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: TIL - The Other Way to Embed Images in Markdown
+title: "TIL: The Other Way to Embed Images in Markdown"
 layout: post
 tags: [markdown,til]
 ---
