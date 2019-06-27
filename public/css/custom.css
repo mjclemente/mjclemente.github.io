@@ -1,8 +1,5 @@
 .post img { box-shadow:#9E9E9E 0px 0px 5px 0px }
-.highlight pre {
-  color: #faf6e4;
-  background-color: #202020;
-}
+
 /* Lists */
 #markdown-toc ul {
   margin-top: 0;
