@@ -3,6 +3,7 @@ published: true
 title: "What is the Modulus Operator? A Short Guide with Practical Use Cases"
 layout: post
 tags: [modulus operator, til, modulo, operators]
+redirect_from: "/2019/06/16/modulus-operator-modulo-operation.html"
 ---
 Addition, subtraction, multiplication, and division. These are the four mathematical operations I was taught during my childhood education, and their operators, `+`, `-`, `*`, `/`, are very familiar. I was not taught `%`,  the ***modulus operator***, which I recently discovered can be quite useful and interesting in its own right.
 
