@@ -6,6 +6,11 @@ tags: [jekyll,hawkins,ruby,blogging]
 ---
 While struggling to write a different post, I procrastinated by deciding that, to boost my productivity, I *needed* the preview of the post to live-reload. It was actually really easy to set up (and it's very cool to use). <!--more-->
 
+___
+**Update - 07/17/2019**: Admittedly, this is a bit late to the party, but I should note that the approach used here is no longer needed. With the [release of Jekyll 3.7](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/) in January of 2018, LiveReload support was built into the core development server. You can use it via the command: `bundle exec jekyll serve --livereload`
+
+___
+
 ## The Problem
 
 I use [LightPaper](http://lightpaper.42squares.in/) to blog. It's the best Markdown editor I've found (and I've tried a lot of them[^1]). While its built-in preview functionality is very good, there are still times that LightPaper's internal Markdown renderer differs from the way kramdown parses/converts the file.[^2] I find these occasional discrepancies frustrating, and they're one of the reasons I prefer to just run `bundle exec jekyll serve` and use the preview supplied by Jekyll's local server when blogging. The downside of this approach is the need to refresh the page in order to see changes, so in order to avoid writing, I decided to track down a solution.
