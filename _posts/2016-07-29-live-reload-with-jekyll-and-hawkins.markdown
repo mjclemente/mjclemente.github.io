@@ -52,5 +52,5 @@ Happy blogging!
 <hr />
 [^1]: Mou, MacDown, Byword, iA Writer, plugins for Sublime Text 3, to name a few. None of them bad; they're just not at quite the same level.
 [^2]: Here are two basic example: 1) They handle escaping special characters differently, which can result in some very funky looking output. 2) LightPaper's syntax highlighting is not as robust.
-[^3]: Update (8/1/2016): In the comments, [@bdavidxyz](https://github.com/bdavidxyz) mentioned his project [Impatient Jekyll](http://bdavidxyz.github.io/impatient-jekyll/), which provides live-reload and more. If you'd like a more full featured dev environment for Jekyll, without that much more work, you should check it out.
+[^3]: Update - 08/01/2016: In the comments, [@bdavidxyz](https://github.com/bdavidxyz) mentioned his project [Impatient Jekyll](http://bdavidxyz.github.io/impatient-jekyll/), which provides live-reload and more. If you'd like a more full featured dev environment for Jekyll, without that much more work, you should check it out.
 

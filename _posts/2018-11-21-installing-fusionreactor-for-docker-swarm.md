@@ -73,7 +73,7 @@ The FusionReactor module and its settings have a [dedicated page](https://comman
 ```
 
 ___
-Update (12/14/2018): The `jvm` key and `args` were added, following a discussion with FusionReactor support. I explain them [in this followup post](/2018/12/14/update-to-fusionreactor-cloud-configuration-on-swarm.html).
+**Update - 12/14/2018**: The `jvm` key and `args` were added, following a discussion with FusionReactor support. I explain them [in this followup post](/2018/12/14/update-to-fusionreactor-cloud-configuration-on-swarm.html).
 
 ___
 
@@ -89,7 +89,7 @@ Here's a breakdown of the settings used above, beneath the `fusionreactor` key:
 
 Assuming that the rest of your CFML stack is in order, with your `box.json` and `server.json` configured, you're ready to deploy to Swarm. The resulting CFML containers will be monitored within the FusionReactor Cloud portal and their licenses will automatically be deactivated as the containers are replaced.
 
-### Update (12/14/2018)
+### Update - 12/14/2018
 
 A discussion with the FusionReactor support team lead to a [followup post](/2018/12/14/update-to-fusionreactor-cloud-configuration-on-swarm.html) with some clarification and fine-tuning to aspects of this configuration.
 

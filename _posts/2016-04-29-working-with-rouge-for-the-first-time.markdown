@@ -30,7 +30,12 @@ So, I tried running `rackup` and it didn't work:
 -bash: rackup: command not found
 ```
 
-I had to do a little digging to resolve this, but it seems like the issue was with my rbenv setup. I needed to manually run the `rbenv init` in order to get the new Gemfile dependencies, including `rackup`, added to rbenv's shims directory (and thereby accessible via my $PATH).[^1]
+I had to do a little digging to resolve this, but it seems like the issue was with my rbenv setup. I needed to manually run the `rbenv init` in order to get the new Gemfile dependencies, including `rackup`, added to rbenv's shims directory (and thereby accessible via my $PATH).
+
+___
+**Update - 07/20/2016**: For those running Cygwin, [Jakub Klimek](/2016/04/29/working-with-rouge-for-the-first-time.html#comment-2792924397) noted, in the comments, that he had to manually add rackup to PATH via his .bashrc: `export PATH=$PATH:~/.gem/ruby/gems/rack-1.6.4/bin/`
+
+___
 
 Once I restarted my terminal, the `rackup` command ran successfully, and I was able to visually access the lexers, like the one for html: http://localhost:9292/html
 
@@ -38,6 +43,4 @@ Once I restarted my terminal, the `rackup` command ran successfully, and I was a
 
 That's it for today - Rouge set up, ready to dig in to how the lexers work.
 
-<hr />
-
-[^1]: Update (7/20/2016): For those running Cygwin, [Jakub Klimek](/2016/04/29/working-with-rouge-for-the-first-time.html#comment-2792924397) noted, in the comments, that he had to manually add rackup to PATH via his .bashrc: `export PATH=$PATH:~/.gem/ruby/gems/rack-1.6.4/bin/`
+___

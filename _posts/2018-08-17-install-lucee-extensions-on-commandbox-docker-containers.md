@@ -32,7 +32,10 @@ ENV LUCEE_EXTENSIONS "16FF9B13-C595-4FA7-B87DED467B7E61A0;name=Memcached;version
 ```
 
 ___
-Update (10/22/2018): John Berquist, a CFML developer I really respect and admire, is developing a fairly comprehensive CommandBox module for managing Lucee server extensions: **[commandbox-lex](https://github.com/jcberquist/commandbox-lex)**. I'm looking forward to trying it out.
+**Update - 10/22/2018**: John Berquist, a CFML developer I really respect and admire, is developing a fairly comprehensive CommandBox module for managing Lucee server extensions: **[commandbox-lex](https://github.com/jcberquist/commandbox-lex)**. I'm looking forward to trying it out.
+
+___
+**Update - 07/13/2019**: Longtime ColdFusion veteran Charlie Arehart pointed out, [in the comments](/2018/08/17/install-lucee-extensions-on-commandbox-docker-containers.html#comment-4538037553), that with the 5.3 release in March of 2019, Lucee added [new extension functionality](https://docs.lucee.org/guides/Lucee5.3-kabang.html#extensions-2), including the ability to programmatically install and manage extensions. Haven't tried this myself, but it's certainly helpful to know!
 
 ___
 
