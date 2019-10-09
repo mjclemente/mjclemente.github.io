@@ -12,6 +12,9 @@ url: https://blog.mattclemente.com
 title: Matthew J. Clemente
 tagline: Always Trying to Be Better
 description: Always trying to be better
+author:
+  name: Matthew J. Clemente
+  email: mjclemente@gmail.com
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
