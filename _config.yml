@@ -18,6 +18,7 @@ author:
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-youtube
 paginate: 5
 exclude:
   - "*.sublime-project"
