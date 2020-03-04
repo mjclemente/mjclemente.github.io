@@ -13,6 +13,6 @@ CommandBox enables developers to extend its functionality via [CommandBox module
 
 This video is quick guide to getting started with Custom Commands, but if you're looking for something more in-depth, I encourage you to [read the docs](https://commandbox.ortusbooks.com/developing-for-commandbox/commands), which I found to be clear, well-organized, and comprehensive.
 
-
-{% youtube "https://www.youtube-nocookie.com/embed/bGfA9SMbqDU" %}
-
+<div class='embed-container'>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bGfA9SMbqDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
