@@ -21,3 +21,22 @@
   width: 100%;
   height: 100%;
 }
+
+button, input {
+	overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0;
+}
+
+input[type=search] {
+  padding: 4px 4px;
+  box-sizing: border-box;
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+  float: right;
+  clear: both;
+}
