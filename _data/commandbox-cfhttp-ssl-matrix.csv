@@ -1,0 +1,21 @@
+Engine,Version,Java,Runwar Arg,SSL Connection,trycf.com,google.com
+Lucee,5.3.6,8,Yes,Valid,200 OK,200 OK
+Lucee,5.3.6,8,No,Valid,Failed,200 OK
+Lucee,5.3.6,11,Yes,Valid,200 OK,200 OK
+Lucee,5.3.6,11,No,Valid,Failed,Failed
+Lucee,5.2.9,8,Yes,Valid,200 OK,200 OK
+Lucee,5.2.9,8,No,Valid,Failed,200 OK
+Lucee,5.2.9,11,Yes,Valid,200 OK,200 OK
+Lucee,5.2.9,11,No,Valid,Failed,Failed
+Adobe,2018,8,Yes,Valid,200 OK,200 OK
+Adobe,2018,8,No,Valid,Failed,200 OK
+Adobe,2018,11,Yes,Valid,200 OK,200 OK
+Adobe,2018,11,No,Valid,200 OK,Failed
+Adobe,2016,8,Yes,Protocol Error,NA,NA
+Adobe,2016,8,No,Valid,Failed,200 OK
+Adobe,2016,11,Yes,Valid,200 OK,200 OK
+Adobe,2016,11,No,Valid,200 OK,Failed
+Adobe,11,8,Yes,Protocol Error,NA,NA
+Adobe,11,8,No,Valid,Failed,200 OK
+Adobe,11,11,Yes,Protocol Error,NA,NA
+Adobe,11,11,No,Protocol Error,NA,NA
