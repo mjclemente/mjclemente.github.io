@@ -20,7 +20,7 @@ I don't intend this post to be a primer on (fat) arrow functions. For that, I'd 
 
 ## Engine Differences (Lucee 5 vs. Adobe ColdFusion 2018)
 
-As I mentioned at the top, Lucee introduced support for arrow functions in Lucee 5, which was released in November of 2016. It wasn't until September 2019, with update 5 to ColdFusion 2018, that Adobe also supported the syntax. However, as you'll see, ACF supports a wider variety of succinct arrow function syntaxes.
+As I mentioned at the top, Lucee introduced support for arrow functions in Lucee 5, which was released in November of 2016. It wasn't until September 2019, with update 5 to ColdFusion 2018, that Adobe also supported the syntax.
 
 ### Fat Arrow Syntax Supported by Both Engines
 
@@ -58,7 +58,7 @@ writeOutput( shrug() ); // ¯\_(ツ)_/¯
 
 Examples of iterators include the array `.map()` member function, `arrayMap()`, and similar.
 
-```js
+```cfc
 cuts = [ "julienne", "chiffonade", "dice" ];
 upperCuts = cuts.map( 
   ( item, index ) => {
@@ -74,11 +74,16 @@ writeDump( var='#upperCuts#', abort='true' );
 
 ### Syntax Supported only by Adobe ColdFusion 2018
 
-The final three examples work, as they should, in Adobe ColdFusion 2018, but result in a syntax error in Lucee. I found this a bit disappointing; hopefully this incompatibility/shortcoming is addressed soon.
+The final three examples work in Adobe ColdFusion 2018, but result in a syntax error in Lucee. I found this a bit disappointing; hopefully this incompatibility/shortcoming is addressed soon.
+
+___
+**Update - 06/04/2020**: Within a few minutes of my publishing this, John Berquist provided a very [insightful comment](https://blog.mattclemente.com/2020/06/04/arrow-functions-in-adobe-coldfusion-and-lucee.html#comment-4941139643) below, pointing out that the primary root of the incompatibilities I encountered is explained the Lucee issue [LDEV-2417](https://luceeserver.atlassian.net/browse/LDEV-2417) - namely, that fat arrow functions shouldn't require parentheses around a single parameter.
+
+___
 
 #### Without parentheses
 
-```js
+```cfc
 // Parentheses are optional when there's only one parameter name
 greet = name => "Hello, #name#.";
 
@@ -87,7 +92,8 @@ writeOutput( greet( "Matthew" ) ); // Hello, Matthew.
 
 #### Without `return` and curly brackets, within iterators
 
-```js
+```cfc
+// Oops. In the comments, John pointed out that this incompatibility doesn't have to do with the arrow function, but rather with how Lucee/ACF differ in their parsing of the semicolon in the function.
 cuts = [ "julienne", "chiffonade", "dice" ];
 upperCuts = cuts.map( 
   ( item, index ) => item.ucase(); 
@@ -99,7 +105,7 @@ writeDump( var='#upperCuts#', abort='true' );
 
 #### Shorthand, within iterators
 
-```js
+```cfc
 cuts = [ "julienne", "chiffonade", "dice" ];
 lengths = cuts.map(cut => cut.len());
 
