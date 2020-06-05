@@ -23,6 +23,11 @@ Finally, we discovered that when our app had SSL enabled in `server.json`, the `
 
 This, of course, made no sense and was the last place we thought to look. I put together a [repro](https://github.com/mjclemente/commandbox-ssl-cfhttp-repro) and opened a ticket for the issue: [CommandBox-1173](https://ortussolutions.atlassian.net/browse/COMMANDBOX-1173).
 
+___
+**Update - 06/05/2020**: A patch in CommandBox 5.1.1 resolved [the issue](https://ortussolutions.atlassian.net/browse/COMMANDBOX-1173) that lead to this post for Lucee servers, though I believe that servers started with Adobe ColdFusion still experience it.
+
+___
+
 ## The Runwar Argument
 
 Brad Wood, wizard of CommandBox that he is, responded to the ticket, asking me to try adding the following Runwar argument: `--ssl-eccdisable=false`. Sure enough, with that flag added, the formerly failing `cfhttp` requests worked, both with and without SSL enabled. 
