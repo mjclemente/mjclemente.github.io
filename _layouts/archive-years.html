@@ -9,7 +9,7 @@ title: Archive
   <div class="section-title mt-2">
     <h2>Archive of posts from <span>{{ page.type }} '{{ page.title }}'</span></h2>
   </div>
-  <div class="row listrecent">
+  <div class="posts">
 
     {% for post in site.posts %}
     {% assign postyear = post.date | date: "%Y" %}
