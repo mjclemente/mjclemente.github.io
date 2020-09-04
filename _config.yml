@@ -7,7 +7,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     default_lang: cfc
-   ## line_numbers: true
+    ## line_numbers: true
 url: https://blog.mattclemente.com
 title: Matthew J. Clemente
 tagline: Always Trying to Be Better
@@ -22,3 +22,8 @@ paginate: 5
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
+# Archives
+collections:
+  archives:
+    output: true
+    permalink: /archives/:path/
