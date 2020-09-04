@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Generate Jekyll Archives
-        uses: kannansuresh/jekyll-blog-archive-workflow@master
+        uses: mjclemente/jekyll-blog-archive-workflow@master
         with:
           archive_url: "https://blog.mattclemente.com/archives/archivedata"
           archive_folder_path: "_archives"
