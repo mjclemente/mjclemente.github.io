@@ -1,9 +1,9 @@
 <div class="post">
   <small class="text-muted"><a
       href="{{ site.baseurl }}/category/{{ post.categories[0] | replace: " ","-" | replace: ".","-" | replace: "#","sharp" | downcase }}">{{ post.categories[0] }}</a></small>
-  <h1 class="post-title">
+  <h2>
     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-  </h1>
+  </h2>
   <span class="post-date">{{ post.date | date_to_string }}</span>
   {{ post.excerpt | strip_html | truncatewords:35 }}
   <hr />
