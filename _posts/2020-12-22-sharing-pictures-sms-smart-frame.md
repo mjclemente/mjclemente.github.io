@@ -26,7 +26,7 @@ Here's the setup I was aiming for:
 
 - Every household gets a picture frame. 
 - A phone number is shared with everyone. This is the "Shared Photos" number.
-- Pictures sent via text to the Shared Photos number show up on all the frames automatically.
+- Pictures texted to the Shared Photos number show up on all the frames automatically.
 - Everyone enjoys their day, occasionally stopping to see the new pictures that others have shared.
 
 The problem to be solved, then, was how to get the pictures from the text messages to the frames.
@@ -77,10 +77,10 @@ You're not quite done with this step yet; the trigger is created, but you also n
 
 You'll then need to connect SendGrid. This is a matter of [creating a new API key](https://sendgrid.com/docs/ui/account-and-settings/api-keys/#creating-an-api-key) to allow Pipedream access to use your SendGrid account. This API key only needs Restricted Access (full access to "Mail Send"). 
 
-Finally, with SendGrid connected, you just need to fill in the parameters required to send the email via SendGrid:
+Finally, with SendGrid connected, you just need to fill in the parameters required to send the email:
 
 - **To email**: Either your multi-frame account email address or a comma separated list of the email addresses of all the individual frames.
-- **Subject**: Up to you. I'm currently using "New Picture from \{\{steps.trigger.event.From}}". This is being sent to the frame email address, so it's not visible.
+- **Subject**: This is being sent to the frame email address, so it's not visible, but it is required. I'm currently using "New Picture from \{\{steps.trigger.event.From}}". 
 - **From email**: An email address that you've verified with SendGrid (or from a domain that you've verified).[^4]
 - **Type**: Just set it to "text/plain".
 - **Value**: This is the body of the email, and as with the Subject, it isn't really being used, but it is required. I set it to "More pictures have been shared by {\{steps.trigger.event.From}}".
@@ -93,7 +93,7 @@ This flow for handling the SMS picture-to-frame was put together quickly, and ha
 
 - **Frames are expensive**. No real way around this. You might try to cut costs a little with repurposed tablets, but I didn't have enough time to explore that route.
 
-- **Frame software problems**. As mentioned above, we used Pix-Star photo frames. And while the process worked, there were two issues worth noting. 
+- **Frame software problems**. As mentioned above, we used Pix-Star photo frames. And while the process worked, there were two issues worth noting:
 
   - First, we found that an occasional photo would not make it to all the frames. I reached out to the Pix-Star support, who were very nice, but had not idea why this was happening and were not able to resolve it. Definitely a source of frustration. 
   - Second, the Pix-Star interface was less than ideal, which made it difficult to manage the frames/pictures from the web. Along with being a bit slow and clunky, there was no way to make sure that the frame and web stayed in sync - a photo could be deleted on the web, but remain on the frame. 
