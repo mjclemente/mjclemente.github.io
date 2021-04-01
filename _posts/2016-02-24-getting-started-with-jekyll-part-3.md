@@ -16,7 +16,7 @@ $ gem install -n /usr/local/bin bundler
 
 There are then a set of instructions for installing the Github Pages Gem, which are pretty straightforward. Create `Gemfile` in the root of the repo. Add these lines:
 
-```conf
+```ruby
 source 'https://rubygems.org'
 gem 'github-pages'
 ```
@@ -27,7 +27,7 @@ Finally, run `bundle exec jekyll build --safe`, which I did. Of course, it didn'
 Could not find gem 'github-pages' in any of the gem sources listed in your Gemfile or available on this machine.
 Run `bundle install` to install missing gems.
 ```
-	
+
 At least the message was instructive, so I ran it: `bundle install`, and the gems were downloaded and installed within *.rbenv* folder. If you run `gem environment` you can get some more helpful information about your gem setup.
 
 At this point, I ran `jekyll serve`, and again, got an error:
@@ -59,5 +59,3 @@ paginate: 5
 From there, I restarted the terminal, and ran `bundle exec jekyll serve`, which worked. The local server was functioning correctly and my posts were being displayed.
 
 It was a long process, but definitely worth it. I can now write and develop locally, and push my changes and posts to Github when I'm ready. I definitely took the long way around, in getting it set up, but I am very impressed and happy with the Jekyll/Github Pages blogging setup.
-
-
