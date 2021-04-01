@@ -13,7 +13,7 @@ The following is an outline of the process I now use to version my Github reposi
 
 2\. When you're ready to release a version, checkout `master` and merge `develop`.
 
-```shell_session
+```shell-session
 $ git checkout master
 Switched to branch 'master'
 Your branch is up-to-date with 'origin/master'.
@@ -24,19 +24,19 @@ Fast-forward
 
 3\. Tag `master` with the version you want to assign. You can see the syntax in the example below. The `-a` means that this is an annotated tag, followed by the version. Annotated tags include a message, which you specify with `-m`.
 
-```shell_session
+```shell-session
 $ git tag -a v0.0.1 -m "Put your message about the version here."
 ```
 
 4\. Push your commits. Note, this does not push the tag, just the commits.
 
-```shell_session
+```shell-session
 $ git push
 ```
 
 5\. Push the tag. *Git doesn't automatically push tags, when you push commits*. You'll forget this, because it's not intuitive, but there it is.
 
-```shell_session
+```shell-session
 $ git push origin v0.0.1
 ```
 

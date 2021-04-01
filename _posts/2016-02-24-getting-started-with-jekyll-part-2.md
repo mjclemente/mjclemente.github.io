@@ -10,14 +10,14 @@ The blog had already been set up (via Tinypress.co) to publish on Github Pages, 
 
 I went back to the [Jekyll Quick Start Guide](http://jekyllrb.com/docs/quickstart/) and skimmed it. I probably should have read a bit more carefully. I ran:
 
-```shell_session
+```shell-session
 $ jekyll new . --force
 $ jekyll serve
 ```
 
 And, when I went to view the site locally, it had blown away the entire existing setup and posts, replacing them with the default Jekyll base installation. Oops. No harm though; I figured that running a hard reset on the repo would fix everything:
 
-```shell_session
+```shell-session
 $ git fetch origin
 $ git reset --hard origin/master
 ```
@@ -32,12 +32,12 @@ Message: "Deprecation: You appear to have pagination turned on, but you haven't 
 
 The first route I tried was to just install the gem:
 
-```shell_session
+```shell-session
 $ gem install -n /usr/local/bin jekyll-paginate
 $ jekyll build
 $ jekyll serve
 ```
-	
+
 Unsurprisingly, given my track record at this point, this didn't work and I got the same error message. This is where I finally gain a small bit of common sense, and went back to the documentation, like I really, really should have from the start.
 
 So, here are the docs: [Setting up your Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/), which ultimately helped me get it up and running, after a few more hiccups, along the way. That's the [third part of this series](/2016/02/24/getting-started-with-jekyll-part-3.html).
@@ -46,5 +46,3 @@ So, here are the docs: [Setting up your Pages site locally with Jekyll](https://
 [^1]: To paraphrase: "The fault, dear reader, is not in Jekyll, / But in ourselves"
 
 [^2]: A little digging after the fact seemed to confirm this: "Changes to _config.yml are not included during automatic regeneration." - From the [Jekyll Basic Usage Docs](http://jekyllrb.com/docs/usage/)
-
-

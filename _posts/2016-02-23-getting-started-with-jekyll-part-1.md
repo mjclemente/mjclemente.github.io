@@ -10,20 +10,20 @@ What follows isn't a guide; it's just my log of the 600+ mistakes it took for me
 
 I started out well enough, using the [Jekyll Installation Docs](http://jekyllrb.com/docs/installation/). They said the best way to install it was using RubyGems, which I hadn't used before, but seemed easy enough, so I ran the command:
 
-```shell_session
+```shell-session
 $ gem install jekyll
 ```
-	
+
 And promptly got the response:
 
-```shell_session
+```shell-session
 ERROR:  While executing gem ... (Gem::FilePermissionError)
 You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory
 ```
 
 With a little Googling and reading on the [Jekyll Troubleshooting](http://jekyllrb.com/docs/troubleshooting/) page, it turns out this is because, unsurprisingly, the system defaults to using the version of Ruby installed by Apple. The first workaround I tried was changing the location where the gem would be installed. I try to use `/usr/local/bin` for the binaries I install anyway, so this made sense:
 
-```shell_session
+```shell-session
 $ gem install -n /usr/local/bin jekyll
 ```
 
@@ -33,7 +33,7 @@ The next step was to, following the advice on this [SO page](http://stackoverflo
 
 I've had a few bad experiences with Homebrew, so I decided to install it manually:
 
-```shell_session
+```shell-session
 $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 $ cd ~/.rbenv && src/configure && make -C src
 ```
@@ -42,31 +42,31 @@ I followed the [installation instructions provided](https://github.com/rbenv/rbe
 
 Genius that I am, I had installed the Ruby version manager, but not any new versions of Ruby, so of course it was still using the system version. I go back to the instructions, read step 5, which was marked as *(Optional)*, and realize that I need to [install ruby-build](https://github.com/rbenv/ruby-build#readme), in order to easily add new versions of Ruby (as alternatives to using the system version). So, I run the installation:
 
-```shell_session
+```shell-session
 $ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 ```
 
 Run the command to list available versions of Ruby to install:
 
-```shell_session
+```shell-session
 $ rbenv install -l
 ```
-	
+
 And then install the most recent stable version:
 
-```shell_session
+```shell-session
 $ rbenv install 2.2.4
 ```
 
 Things go smoothly. I see that they're being installed to `~/.rbenv/versions/`. I run the command to set the newer version to be used globally:
 
-```shell_session
+```shell-session
 $ rbenv global 2.2.4
 ```
 
 At this point, I needed to restart the terminal, and then finally, I was able to run the Jekyll install command successfully:
 
-```shell_session
+```shell-session
 $ gem install -n /usr/local/bin jekyll
 ```
 <hr />

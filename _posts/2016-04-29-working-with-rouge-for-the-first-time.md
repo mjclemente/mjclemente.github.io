@@ -10,7 +10,7 @@ When I started blogging with Jekyll, one of the projects that interested me was 
 
 I wasn't sure exactly where to begin, but I did anyway, which I've found to be an effective strategy for learning new tech. I forked the [Rouge repo](https://github.com/jneen/rouge) and then cloned it locally:
 
-```shell_session
+```shell-session
 $ git clone git@github.com:mjclemente/rouge.git
 ```
 

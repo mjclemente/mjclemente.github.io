@@ -11,9 +11,9 @@ My [PR](https://github.com/jneen/rouge/pull/492) was merged (back on June 14) by
 
 If you have [Jekyll set up the same way that I do](/2016/02/24/getting-started-with-jekyll-part-3.html), with Bundler, then the first thing (really the only thing) you need to do to get this set up locally is update your gem dependencies:
 
-```shell_session
+```shell-session
 $ bundle exec gem update github-pages
-``` 
+```
 That will get you the version of Rouge necessary to write your cfscript code blocks like this:
 
 ~~~text
@@ -32,6 +32,6 @@ private struct function iAmAFunction() {
 	return something;
 }
 ```
-And that's it. Blogging with cfscript just got a lot more colorful! 
+And that's it. Blogging with cfscript just got a lot more colorful!
 
 <hr />

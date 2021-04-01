@@ -10,7 +10,7 @@ This time, I actually read the docs. From Github Help: [Setting up your Pages si
 
 They recommend using the Github Pages gem, and the Bundler gem. Obviously, I didn't have either of these installed. So I started with Bundler:
 
-```shell_session
+```shell-session
 $ gem install -n /usr/local/bin bundler
 ```
 
@@ -32,7 +32,7 @@ At least the message was instructive, so I ran it: `bundle install`, and the gem
 
 At this point, I ran `jekyll serve`, and again, got an error:
 
-```shell_session
+```shell-session
 $ jekyll serve
 Dependency Error: Yikes! It looks like you don't have kramdown or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- kramdown' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/!
 ```
