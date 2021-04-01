@@ -133,7 +133,7 @@ To recap, we've added a `ModuleConfig.cfc` to the root of our project, used its 
 
 If you're not a ColdBox developer, you'll want a way to know that your updates have worked; I recommend using CommandBox to set up a basic ColdBox app. There's a [60 Minute Quick Start](https://coldbox.ortusbooks.com/for-newbies/60-minute-quick-start) that I found really helpful; for a 30 Second Quick Start, you can copy and paste the following:
 
-```zsh
+```bash
 mkdir myTestApp --cd &&
 coldbox create app name=myTestApp skeleton=Simple &&
 coldbox create handler name="hello" actions="index" &&

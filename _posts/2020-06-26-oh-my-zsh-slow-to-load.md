@@ -5,7 +5,7 @@ layout: post
 tags: [zsh, oh-my-zsh, shell, nvm]
 typora-root-url: ../../blog.mattclemente.com
 ---
-My shell startup has felt laggy for a while, but never quite slow enough that I felt compelled to track down the cause. Until today. Today I finally put in work, managing to shave nearly a second off its load time through a few adjustments to my setup with Oh My ZSH. 
+My shell startup has felt laggy for a while, but never quite slow enough that I felt compelled to track down the cause. Until today. Today I finally put in work, managing to shave nearly a second off its load time through a few adjustments to my setup with Oh My ZSH.
 <!--more-->
 
 **tldr;** Virtual environment managers ([nvm](https://github.com/nvm-sh/nvm), [rbenv](https://github.com/rbenv/rbenv), [jenv](https://www.jenv.be), etc) are the most common culprits for a slow loading terminal, and there are a few approaches to speeding them up.
@@ -31,9 +31,9 @@ So, at the start of this, my shell load time was: *1.35 seconds*. First, let's t
 
 ## How To Test Your Shell Load Time
 
-If you want to improve your shell's load time, you need to be able to measure it. For that, I found a [handy script](https://blog.jldc.me/posts/speeding-up-zsh) that times the startup of an interactive shell: 
+If you want to improve your shell's load time, you need to be able to measure it. For that, I found a [handy script](https://blog.jldc.me/posts/speeding-up-zsh) that times the startup of an interactive shell:
 
-```zsh
+```bash
 for i in $(seq 1 10); do /usr/bin/time $SHELL -i -c exit; done
 ```
 
@@ -50,11 +50,11 @@ With that, we can just call `timezsh` whenever we want to measure the shell's lo
 
 ![test results for the first shell load test](/public/assets/images/shell-load-time-first-test.png)
 
-Not good, which meant there was a lot of room for improvement. 
+Not good, which meant there was a lot of room for improvement.
 
 ### Measuring Plugin Load Time
 
-I began by examining my plugins, to see if any of them were slowing down the load time of the shell. Initially I tested this manually, by removing the plugins listed in my `~/.zshrc` one at a time and then timing the updated config. Not the most efficient approach, though it certainly works. 
+I began by examining my plugins, to see if any of them were slowing down the load time of the shell. Initially I tested this manually, by removing the plugins listed in my `~/.zshrc` one at a time and then timing the updated config. Not the most efficient approach, though it certainly works.
 
 #### How to Reload the Shell After Making Changes
 
@@ -65,18 +65,18 @@ A quick, but important note. If you're trying to speed up your shell, you're goi
 A little [more reading](https://blog.jldc.me/posts/speeding-up-zsh#fixing-the-problem) lead me to realize that I could programmatically profile the source/load time of all my plugins at once by making some temporary adjustments to  `~/.oh-my-zsh/oh-my-zsh.sh`. If you've installed [Homebrew/coreutils](Homebrew/coreutils), this can be done using `gdate`. In `oh-my-zsh.sh`, you'll want to update the portion of the script that loads the plugins (around [line 101](https://github.com/ohmyzsh/ohmyzsh/blob/d47447a5e63715ae6ab6c2f46924dc8766c8e746/oh-my-zsh.sh#L101) at the time this was written), with the following, which wraps the process in a timer:
 
 ```bash
-# Load all of the plugins that were defined in ~/.zshrc  
+# Load all of the plugins that were defined in ~/.zshrc
 for plugin ($plugins); do
   timer=$(($(gdate +%s%N)/1000000))
-  if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then  
-    source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh  
-  elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then  
-    source $ZSH/plugins/$plugin/$plugin.plugin.zsh  
-  fi  
+  if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
+    source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
+  elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
+    source $ZSH/plugins/$plugin/$plugin.plugin.zsh
+  fi
   now=$(($(gdate +%s%N)/1000000))
-  elapsed=$(($now-$timer))  
-  echo $elapsed":" $plugin  
-done 
+  elapsed=$(($now-$timer))
+  echo $elapsed":" $plugin
+done
 ```
 
 Now, I don't use Homebrew, so I had to adjust this a little - I managed to put together an approximation, using Python. In place of the `gdate` scripts, I used:
@@ -95,13 +95,13 @@ Reminder: don't forget to remove those changes from `oh-my-zsh.sh` when you're d
 
 ### A Note on Profiling with `zsh/zprof`
 
-So, at this point I probably could/should have used `zsh/zprof`, a profiling module that's built into Zsh.[^3] But I didn't. Honestly, when I first explored it, I found the output a bit overwhelming and just moved on. A later, more thorough analysis lead me to realize its value. 
+So, at this point I probably could/should have used `zsh/zprof`, a profiling module that's built into Zsh.[^3] But I didn't. Honestly, when I first explored it, I found the output a bit overwhelming and just moved on. A later, more thorough analysis lead me to realize its value.
 
 Using `zsh/zprof` is straightforward: add the line `zmodload zsh/zprof` to the start of your `~/.zshrc`; after saving/reloading your shell, you can run the command `zprof` to get profiling information. The results look something like this, though they'll be far longer:
 
 ![zprof results](/public/assets/images/zprof-results.png)
 
-Now, that's a lot of information; don't let your eyes glaze over. 
+Now, that's a lot of information; don't let your eyes glaze over.
 
 Here's my opinion - for speeding up your shell, the information that matters the most is the self/percent column, right before the function names. This indicates the the percentage of time spent in the function, and it gives you a *general* idea of what's taking up most of the shell load time. You'll still need to do some digging to determine where the function is being called, and how to address it.
 
@@ -115,7 +115,7 @@ Obviously, I want to use `nvm` - it's a really helpful tool - getting rid of it 
 
 ## Handling Virtual Environments
 
-While `nvm` turned out to be the biggest culprit for my shell's slowdown, the other virtual environment tools I use, `rbenv` and `jenv`, were not without blame. Removing them resulted in a startup that was .35 seconds faster. 
+While `nvm` turned out to be the biggest culprit for my shell's slowdown, the other virtual environment tools I use, `rbenv` and `jenv`, were not without blame. Removing them resulted in a startup that was .35 seconds faster.
 
 So, the question arises, how do we use these virtual environment tools while also keeping our shell startup snappy? It seems there are two primary answers: Lazy Loading and Caching Eval statements.
 
@@ -196,4 +196,3 @@ ______
 [^3]: Here are the [docs on the zsh/zprof module](http://zsh.sourceforge.net/Doc/Release/Zsh-Modules.html#The-zsh_002fzprof-Module), for those interested.
 [^4]: To be clear, by removing NVM, I mean removing it from my `~/.zshrc`. That is, deleting [the source lines you're instructed to add](https://github.com/nvm-sh/nvm#install--update-script) when installing it.
 [^5]: Not to be confused with the plugin named simply [nvm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm), which is listed on the official [Oh My Zsh plugins page](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins), but which doesn't provide the functionality we're looking for.
-
