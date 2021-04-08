@@ -26,6 +26,8 @@ conn = driver.connect( connectionString, props );
 You can then execute your query and assign its ResultSet to a variable:
 
 ```cfc
+st = conn.createStatement();
+
 sql = "SELECT * FROM my_awesome_table";
 
 rs = st.ExecuteQuery(sql);
