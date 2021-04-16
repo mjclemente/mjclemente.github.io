@@ -14,9 +14,10 @@ Recently, I set up a demo Github account. I already had a demo GitLab account. S
 
 * TOC
 {:toc}
+
 ## Two Accounts... Why?
 
-There are a handful of reasons to have multiple GitHub/GitLab/Bitbucket accounts. The most common is probably having separate work and personal accounts. In my case, I wanted to set up a separate account to use for live coding. Of late, I've been [live streaming each week](https://www.youtube.com/channel/UC09HBVzOOyx1bdgRgo2CB4A) while exploring new (to me) tools and services. A separate, demo GitHub account provided better code organization, and from a security perspective, minimized the risk if I accidentally revealed an API key or some other secret while broadcasting. 
+There are a handful of reasons to have multiple GitHub/GitLab/Bitbucket accounts. The most common is probably having separate work and personal accounts. In my case, I wanted to set up a separate account to use for live coding. Of late, I've been [live streaming each week](https://www.youtube.com/channel/UC09HBVzOOyx1bdgRgo2CB4A) while exploring new (to me) tools and services. A separate, demo GitHub account provided better code organization, and from a security perspective, minimized the risk if I accidentally revealed an API key or some other secret while broadcasting.
 
 Regardless of your reason or the remote repository provider (GitHub, GitLab, Bitbucket) that you're using, the general approach to setting up multiple users is the same.
 
@@ -24,11 +25,11 @@ Regardless of your reason or the remote repository provider (GitHub, GitLab, Bit
 
 So, this topic has been covered in dozens of other blogs and Q&A posts. Here are a few I referenced while sorting this out:
 
-- [A Practical Guide to Managing Multiple GitHub Accounts](https://medium.com/the-andela-way/a-practical-guide-to-managing-multiple-github-accounts-8e7970c8fd46):  
+* [A Practical Guide to Managing Multiple GitHub Accounts](https://medium.com/the-andela-way/a-practical-guide-to-managing-multiple-github-accounts-8e7970c8fd46):
   This is the primary post I used, and I found it thorough, clear, and helpful. If it weren't for the issue with my `~/.ssh/config`, discussed below, following the steps here would have been sufficient.
-- [Stack Overflow: Multiple github accounts on the same computer?](https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer)  
+* [Stack Overflow: Multiple github accounts on the same computer?](https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer)
   Filled with helpful information and some thorough responses.
-- [Quick Tip: How to Work with GitHub and Multiple Accounts](https://code.tutsplus.com/tutorials/quick-tip-how-to-work-with-github-and-multiple-accounts--net-22574)  
+* [Quick Tip: How to Work with GitHub and Multiple Accounts](https://code.tutsplus.com/tutorials/quick-tip-how-to-work-with-github-and-multiple-accounts--net-22574)
   Old Jeffrey Way post from Tuts+, that includes a screencast.
 
 ## The Setup (in brief)
@@ -70,7 +71,7 @@ Host *
 
 Here's the short diagnosis - the wildcard `Host *` causes problems; specifically, its `IdentityFile` entry. To resolve it, I had to 1) remove the `IdentityFile` from the wildcard Host, and 2) add an entry in the config file for each Host I connect to.
 
-Here's the slightly longer explanation, that I learned after a lot of reading. Most Host options can only be specified once, with [the first occurrence being used](https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client#interpretation-algorithm). This is why wildcard configurations should be put last - to provide default values. However, *it's possible to have multiple identity files*; from the [Linux man pages](https://man7.org/linux/man-pages/man5/ssh_config.5.html): 
+Here's the slightly longer explanation, that I learned after a lot of reading. Most Host options can only be specified once, with [the first occurrence being used](https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client#interpretation-algorithm). This is why wildcard configurations should be put last - to provide default values. However, *it's possible to have multiple identity files*; from the [Linux man pages](https://man7.org/linux/man-pages/man5/ssh_config.5.html):
 
 >  Multiple IdentityFile directives will add to the list of identities tried (this behaviour differs from that of other configuration directives).
 
@@ -82,10 +83,12 @@ So, to wrap it up, the final setup could look something like this, still using a
 # --- For Demo GitHub Repo ---
 Host github.com-demo
   IdentityFile ~/.ssh/demo_github_com_rsa
+  IdentitiesOnly yes
 
 # --- For Demo GitHub Repo ---
 Host github.com
   IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
 
 # Defaults
 Host *
@@ -95,7 +98,6 @@ Host *
   UseKeychain yes
 ```
 
-
-
----
-
+___
+**Update - 04/16/2021**: I've updated this to include the `IdentitiesOnly yes` option. As explained in [this Stack Overflow answer](https://stackoverflow.com/questions/7927750/specify-an-ssh-key-for-git-push-for-a-given-domain/7927828#7927828), this option prevents the use of default ids. In this specific example the option is not needed. However, in more advanced setups, if `ssh` intelligently matches hosts, this option ensures only the specified `IdentityFile` is used, and that another is not appended.
+___
