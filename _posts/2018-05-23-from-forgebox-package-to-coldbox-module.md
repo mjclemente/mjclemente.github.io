@@ -1,4 +1,5 @@
 ---
+date: 2018-05-23
 published: true
 title: Building My First ColdBox Modules
 layout: post

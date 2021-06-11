@@ -1,4 +1,5 @@
 ---
+date: 2016-06-09
 published: true
 title: Working on a CFScript Rouge Lexer
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2016-04-06
 published: true
 title: Getting Started with CFLint
 layout: post

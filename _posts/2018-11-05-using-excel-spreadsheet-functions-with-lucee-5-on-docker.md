@@ -1,4 +1,5 @@
 ---
+date: 2018-11-05
 published: true
 title: How Not To Use Spreadsheet Functions in Lucee
 layout: post

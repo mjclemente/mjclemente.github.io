@@ -1,4 +1,5 @@
 ---
+date: 2016-03-16
 published: true
 title: Think MVC&#58; On Validating in Services
 layout: post

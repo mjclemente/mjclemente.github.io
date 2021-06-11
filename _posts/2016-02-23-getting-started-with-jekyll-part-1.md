@@ -1,4 +1,5 @@
 ---
+date: 2016-02-23
 published: true
 title: Blogging with Jekyll (Part 1, Wrestling with Ruby)
 layout: post

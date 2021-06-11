@@ -1,4 +1,5 @@
 ---
+date: 2016-02-17
 published: true
 title: Gotta start somewhere
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2020-03-02
 published: true
 title: "Getting Started with CommandBox Custom Commands"
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2021-03-02
 published: true
 title: "TIL: ucFirst() for Word Casing in Lucee CFML"
 layout: post

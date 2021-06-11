@@ -1,4 +1,5 @@
 ---
+date: 2017-04-08
 published: true
 title: Quick Tip - CFML Documentation on Mac
 layout: post

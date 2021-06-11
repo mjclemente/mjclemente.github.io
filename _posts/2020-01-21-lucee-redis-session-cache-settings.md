@@ -1,4 +1,5 @@
 ---
+date: 2020-01-21
 published: true
 title: "Sizing Your Redis Cache for Sessions - A Quick Lesson Learned"
 layout: post

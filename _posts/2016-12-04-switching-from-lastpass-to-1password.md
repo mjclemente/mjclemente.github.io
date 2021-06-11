@@ -1,4 +1,5 @@
 ---
+date: 2016-12-04
 published: true
 title: Switching from LastPass to 1Password and Keeping Your Folders
 layout: post

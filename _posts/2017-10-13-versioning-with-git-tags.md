@@ -1,4 +1,5 @@
 ---
+date: 2017-10-13
 published: true
 title: Versioning With Git Tags
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2018-10-22
 published: true
 title: "TIL: The Other Way to Embed Images in Markdown"
 layout: post

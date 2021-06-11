@@ -1,4 +1,5 @@
 ---
+date: 2016-02-24
 published: true
 title: Blogging with Jekyll (Part 2, Jekyll Setup)
 layout: post

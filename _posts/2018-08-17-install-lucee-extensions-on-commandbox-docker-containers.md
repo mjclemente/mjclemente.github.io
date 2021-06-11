@@ -1,4 +1,5 @@
 ---
+date: 2018-08-17
 published: true
 title: Install Lucee Extensions on CommandBox Docker Containers
 layout: post

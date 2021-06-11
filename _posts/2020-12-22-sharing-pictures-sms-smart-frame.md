@@ -1,4 +1,5 @@
 ---
+date: 2020-12-22
 published: true
 title: "How Our Family Uses SMS and Smart Picture Frames to Connect During Remote Holidays"
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2021-03-22
 published: true
 title: "PostgreSQL - Only Update If Greater Than"
 layout: post

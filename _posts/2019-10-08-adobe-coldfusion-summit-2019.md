@@ -1,4 +1,5 @@
 ---
+date: 2019-10-08
 published: true
 title: Adobe ColdFusion Summit 2019
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2016-03-04
 published: true
 title: Using QueryExecute (ColdFusion 11)
 layout: post

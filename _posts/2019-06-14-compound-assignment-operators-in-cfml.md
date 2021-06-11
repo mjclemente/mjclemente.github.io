@@ -1,4 +1,5 @@
 ---
+date: 2019-06-14
 published: true
 title: "TIL: Compound Assignment Operators in CFML (+= and more)"
 layout: post

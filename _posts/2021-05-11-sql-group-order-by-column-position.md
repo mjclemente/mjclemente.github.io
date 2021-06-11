@@ -1,4 +1,5 @@
 ---
+date: 2021-05-11
 published: true
 title: "Group By or Order By Column Position in a SQL Query"
 layout: post

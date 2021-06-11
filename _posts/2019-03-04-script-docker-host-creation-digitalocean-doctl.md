@@ -1,4 +1,5 @@
 ---
+date: 2019-03-04
 published: true
 title: Scripting Docker Host Creation on DigitalOcean without Docker Machine
 layout: post

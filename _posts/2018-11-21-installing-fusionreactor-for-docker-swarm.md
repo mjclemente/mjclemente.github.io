@@ -1,4 +1,5 @@
 ---
+date: 2018-11-21
 published: true
 title: FusionReactor for Docker Swarm (Part 1, Installation)
 layout: post

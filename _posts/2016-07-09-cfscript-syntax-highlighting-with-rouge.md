@@ -1,4 +1,5 @@
 ---
+date: 2016-07-09
 published: true
 title: CFScript Syntax Highlighting with Rouge!
 layout: post

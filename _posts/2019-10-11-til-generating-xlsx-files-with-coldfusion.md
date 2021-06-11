@@ -1,4 +1,5 @@
 ---
+date: 2019-10-11
 published: true
 title: "TIL: Generating .xlsx Files with CFML - An Easy Way to Reduce File Size"
 layout: post

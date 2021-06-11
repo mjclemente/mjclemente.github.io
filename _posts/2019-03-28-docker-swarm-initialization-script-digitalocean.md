@@ -1,4 +1,5 @@
 ---
+date: 2019-03-28
 published: true
 title: Script to Create Docker Swarm on DigitalOcean
 layout: post

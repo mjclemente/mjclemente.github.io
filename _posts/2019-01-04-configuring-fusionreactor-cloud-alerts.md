@@ -1,4 +1,5 @@
 ---
+date: 2019-01-04
 published: true
 title: FusionReactor for Docker Swarm (Part 2, Alerting)
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2017-07-25
 published: true
 title: A Complete Beginner Gets Started Using Docker (Mac)
 layout: post

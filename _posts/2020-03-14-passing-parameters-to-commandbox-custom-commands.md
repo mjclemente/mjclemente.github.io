@@ -1,4 +1,5 @@
 ---
+date: 2020-03-14
 published: true
 title: "Passing Parameters to CommandBox Custom Commands"
 layout: post

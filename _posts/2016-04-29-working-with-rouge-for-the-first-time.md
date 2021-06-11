@@ -1,4 +1,5 @@
 ---
+date: 2016-04-29
 published: true
 title: Working With Rouge for the First Time
 layout: post

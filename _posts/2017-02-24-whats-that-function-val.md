@@ -1,4 +1,5 @@
 ---
+date: 2017-02-24
 published: true
 title: What's that function - val()?
 layout: post

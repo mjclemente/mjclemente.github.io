@@ -1,4 +1,5 @@
 ---
+date: 2020-09-06
 published: true
 title: "Building a Basic Uptime Monitor with Pipedream"
 layout: post

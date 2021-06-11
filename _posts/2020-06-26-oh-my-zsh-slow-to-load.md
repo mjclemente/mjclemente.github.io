@@ -1,4 +1,5 @@
 ---
+date: 2020-06-26
 published: true
 title: "Speeding Up My Shell (Oh My Zsh)"
 layout: post

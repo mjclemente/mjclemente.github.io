@@ -1,4 +1,5 @@
 ---
+date: 2017-07-26
 published: true
 title: A Complete Beginner Runs Lucee on Docker (Mac)
 layout: post

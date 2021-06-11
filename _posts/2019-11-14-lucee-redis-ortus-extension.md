@@ -1,4 +1,5 @@
 ---
+date: 2019-11-14
 published: true
 title: "Using Redis with Lucee: An Approach with the CommandBox Docker Image and Ortus Redis Extension"
 layout: post

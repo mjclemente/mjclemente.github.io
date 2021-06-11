@@ -1,4 +1,5 @@
 ---
+date: 2018-06-27
 published: true
 title: It's containers all the way down
 layout: post

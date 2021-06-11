@@ -1,4 +1,5 @@
 ---
+date: 2018-07-15
 published: true
 title: Scripting Docker Host Creation on DigitalOcean
 layout: post

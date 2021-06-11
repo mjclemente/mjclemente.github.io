@@ -1,4 +1,5 @@
 ---
+date: 2020-02-04
 published: true
 title: "Notes on Migrating from MS SQL Server to PostgreSQL"
 layout: post

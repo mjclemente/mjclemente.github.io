@@ -1,4 +1,5 @@
 ---
+date: 2018-01-18
 published: true
 title: Invoke Lambda from ColdFusion
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2020-09-15
 published: true
 title: "A Note on Misconfiguring my SSH Config When Setting Up Two Github Accounts"
 layout: post

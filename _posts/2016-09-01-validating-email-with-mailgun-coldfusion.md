@@ -1,4 +1,5 @@
 ---
+date: 2016-09-01
 published: true
 title: You Should Probably Be Validating Email with Mailgun
 layout: post

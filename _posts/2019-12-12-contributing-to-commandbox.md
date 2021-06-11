@@ -1,4 +1,5 @@
 ---
+date: 2019-12-12
 published: true
 title: "Contributing to CommandBox - Steps for Building and Developing Locally"
 layout: post

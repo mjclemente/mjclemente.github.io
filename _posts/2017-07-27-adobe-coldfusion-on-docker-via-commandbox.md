@@ -1,4 +1,5 @@
 ---
+date: 2017-07-27
 published: true
 title: A Complete Beginner Runs Adobe ColdFusion on Docker (Mac)
 layout: post

@@ -1,4 +1,5 @@
 ---
+date: 2017-07-08
 published: true
 title: Updated Considerations When Validating Email with Mailgun
 layout: post

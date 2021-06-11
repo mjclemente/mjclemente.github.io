@@ -1,4 +1,5 @@
 ---
+date: 2018-12-14
 published: true
 title: Updated Configuration for FusionReactor Cloud on Docker Swarm
 layout: post

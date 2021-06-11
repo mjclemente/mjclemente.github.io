@@ -1,4 +1,5 @@
 ---
+date: 2016-03-06
 published: true
 title: Rouge Syntax Highlighting Issue
 layout: post

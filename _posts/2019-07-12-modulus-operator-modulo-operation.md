@@ -1,4 +1,5 @@
 ---
+date: 2019-07-12
 published: true
 title: "What is the Modulus Operator? A Short Guide with Practical Use Cases"
 layout: post

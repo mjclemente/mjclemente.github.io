@@ -1,4 +1,5 @@
 ---
+date: 2020-06-04
 published: true
 title: "Fat Arrow Function Support in Lucee 5 and Adobe ColdFusion 2018"
 layout: post

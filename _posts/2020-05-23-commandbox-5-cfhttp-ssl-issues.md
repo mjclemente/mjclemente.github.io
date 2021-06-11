@@ -1,4 +1,5 @@
 ---
+date: 2020-05-23
 published: true
 title: "CFHTTP and SSL issues with CommandBox 5"
 layout: post

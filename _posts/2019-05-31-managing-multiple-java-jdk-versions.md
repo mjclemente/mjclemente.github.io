@@ -1,4 +1,5 @@
 ---
+date: 2019-05-31
 published: true
 title: "How to Install and Manage Multiple Versions of Java (hint: jabba and jEnv)"
 layout: post

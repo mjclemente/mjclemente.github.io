@@ -1,4 +1,5 @@
 ---
+date: 2016-07-29
 published: true
 title: Live Reload with Jeykll and Hawkins
 layout: post

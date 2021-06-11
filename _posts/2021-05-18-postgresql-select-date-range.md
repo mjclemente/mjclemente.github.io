@@ -1,4 +1,5 @@
 ---
+date: 2021-05-18
 published: true
 title: "TIL: The Easiest Way to Select the Last 30 Days (or Any Interval) in PostgreSQL"
 layout: post

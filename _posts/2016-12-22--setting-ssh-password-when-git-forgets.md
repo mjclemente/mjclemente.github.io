@@ -1,4 +1,5 @@
 ---
+date: 2016-12-22
 published: true
 title: Why Does Git Keep Asking for My SSH Password (Bitbucket / Github)?
 layout: post

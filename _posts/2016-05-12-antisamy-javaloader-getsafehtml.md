@@ -1,4 +1,5 @@
 ---
+date: 2016-05-12
 published: true
 title: Using AntiSamy with ColdFusion 11
 layout: post
