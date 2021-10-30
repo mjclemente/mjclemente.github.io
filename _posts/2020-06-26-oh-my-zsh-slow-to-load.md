@@ -32,7 +32,7 @@ So, at the start of this, my shell load time was: *1.35 seconds*. First, let's t
 
 ## How To Test Your Shell Load Time
 
-If you want to improve your shell's load time, you need to be able to measure it. For that, I found a [handy script](https://blog.jldc.me/posts/speeding-up-zsh) that times the startup of an interactive shell:
+If you want to improve your shell's load time, you need to be able to measure it. For that, I found a [handy script](https://blog.jonlu.ca/posts/speeding-up-zsh) that times the startup of an interactive shell:
 
 ```bash
 for i in $(seq 1 10); do /usr/bin/time $SHELL -i -c exit; done
@@ -63,7 +63,7 @@ A quick, but important note. If you're trying to speed up your shell, you're goi
 
 #### Timing All Plugins Programmatically
 
-A little [more reading](https://blog.jldc.me/posts/speeding-up-zsh#fixing-the-problem) lead me to realize that I could programmatically profile the source/load time of all my plugins at once by making some temporary adjustments to  `~/.oh-my-zsh/oh-my-zsh.sh`. If you've installed [Homebrew/coreutils](Homebrew/coreutils), this can be done using `gdate`. In `oh-my-zsh.sh`, you'll want to update the portion of the script that loads the plugins (around [line 101](https://github.com/ohmyzsh/ohmyzsh/blob/d47447a5e63715ae6ab6c2f46924dc8766c8e746/oh-my-zsh.sh#L101) at the time this was written), with the following, which wraps the process in a timer:
+A little [more reading](https://blog.jonlu.ca/posts/speeding-up-zsh#fixing-the-problem) lead me to realize that I could programmatically profile the source/load time of all my plugins at once by making some temporary adjustments to  `~/.oh-my-zsh/oh-my-zsh.sh`. If you've installed [Homebrew/coreutils](Homebrew/coreutils), this can be done using `gdate`. In `oh-my-zsh.sh`, you'll want to update the portion of the script that loads the plugins (around [line 101](https://github.com/ohmyzsh/ohmyzsh/blob/d47447a5e63715ae6ab6c2f46924dc8766c8e746/oh-my-zsh.sh#L101) at the time this was written), with the following, which wraps the process in a timer:
 
 ```bash
 # Load all of the plugins that were defined in ~/.zshrc
@@ -179,7 +179,7 @@ Now, I know that I could do more to shave off fractions of a second, but like I 
 
 The following are some of the posts and guides I used while working on this - many thanks to the authors for sharing them - and hopefully you find them helpful as well. In no particular order:
 
-- [https://blog.jldc.me/posts/speeding-up-zsh](https://blog.jldc.me/posts/speeding-up-zsh)
+- [https://blog.jonlu.ca/posts/speeding-up-zsh](https://blog.jonlu.ca/posts/speeding-up-zsh)
 - [http://broken-by.me/lazy-load-nvm/](http://broken-by.me/lazy-load-nvm/)
 - [https://www.growingwiththeweb.com/2018/01/slow-nvm-init.html](https://www.growingwiththeweb.com/2018/01/slow-nvm-init.html)
 - [https://bennycwong.github.io/post/speeding-up-oh-my-zsh/](https://bennycwong.github.io/post/speeding-up-oh-my-zsh/)
